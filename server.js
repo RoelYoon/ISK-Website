@@ -27,9 +27,8 @@ app.get('/articles', async (req, res) => {
 app.post("/upload",
  (req,res)=>{
     //replace with postgresql database
-    exec("pwd");
     const content = req.body.title+"\n"+req.body.img;
-    const pth = '/Users/ISK-Website/public/Article'+artCount++;
+    const pth = '/Article'+artCount++;
     exec("touch "+pth, (err, output) => {
         // once the command has completed, the callback function is called
         if (err) {
