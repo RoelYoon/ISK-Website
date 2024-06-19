@@ -2,7 +2,6 @@ const express = require("express");
 const db = require('./db');
 const path = require("path");
 const app = express();
-const { exec } = require('child_process')
 app.use(express.static(path.join(__dirname,"./public")));
 app.use(express.static(path.join(__dirname,"./node_modules")));
 app.use(express.urlencoded({
@@ -13,6 +12,14 @@ async (req,res)=>{
     await res.sendFile(path.resolve(__dirname,"./public/index.html"));
 })
 var artCount = 0;
+db
+	.connect()
+	.then(() => {
+		console.log('Connected to PostgreSQL database');
+	})
+	.catch((err) => {
+		console.error('Error connecting to PostgreSQL database', err);
+	});
 app.get('/articles', async (req, res) => {
     try {
         const result = await db.query('SELECT * FROM article');
