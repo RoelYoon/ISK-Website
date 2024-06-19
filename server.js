@@ -15,7 +15,7 @@ async (req,res)=>{
 var artCount = 0;
 app.get('/articles', async (req, res) => {
     try {
-        const result = await db.query('SELECT * FROM users');
+        const result = await db.query('SELECT * FROM article');
         res.json(result.rows);
     } catch (err) {
         console.error(err);
