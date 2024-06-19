@@ -3,7 +3,7 @@ const pool = new Pool({
   user: 'roelyoon',
   password: 'love012',
   host: '35.203.145.230',
-  port: 5432, // default Postgres port
+  port: 8099, // default Postgres port
   database: 'ISK'
 });
 module.exports = {
