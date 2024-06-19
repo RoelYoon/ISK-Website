@@ -15,7 +15,7 @@ async (req,res)=>{
 var artCount = 0;
 app.get('/articles', async (req, res) => {
     try {
-        const result = await db.query('SELECT * FROM article');
+        const result = await db.query('SELECT * FROM article;');
         res.json(result.rows);
     } catch (err) {
         console.error(err);
@@ -27,7 +27,7 @@ app.post("/upload",
  async (req,res)=>{
     try{
     //replace with postgresql database
-    await db.query('INSERT INTO article VALUES('+req.body.title+","+req.body.img+")");
+    await db.query('INSERT INTO article (title, img) VALUES ('+req.body.title+","+req.body.img+");");
     res.sendFile(path.resolve(__dirname,"./public/index.html"));
     }catch (err){
         console.error(err);
