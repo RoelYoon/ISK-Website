@@ -20,7 +20,7 @@ app.get('/articles', async (req, res) => {
 });
 
 app.post("/upload",
-async (req,res)=>{
+ (req,res)=>{
     console.log(req.body.title);
     res.sendFile(path.resolve(__dirname,"./public/index.html"));
 }
