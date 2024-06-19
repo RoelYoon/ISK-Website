@@ -3,6 +3,7 @@ const db = require('./db');
 const path = require("path");
 const app = express();
 const fs = require('fs');
+const { exec } = require('node:child_process')
 app.use(express.static(path.join(__dirname,"./public")));
 app.use(express.static(path.join(__dirname,"./node_modules")));
 app.use(express.urlencoded({
@@ -27,7 +28,16 @@ app.post("/upload",
  (req,res)=>{
     //replace with postgresql database
     const content = req.body.title+"\n"+req.body.img;
-    fs.appendFile('/Users/ISK-Website/public/Article'+artCount++, content, err => {
+    const pth = '/Users/ISK-Website/public/Article'+artCount++;
+    exec("touch "+pth, (err, output) => {
+        // once the command has completed, the callback function is called
+        if (err) {
+            // log and return if we encounter an error
+            console.error("could not execute command: ", err)
+            return
+        }
+    })
+    fs.writeFile(pth, content, err => {
       if (err) {
         console.error(err);
       } else {
