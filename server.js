@@ -2,6 +2,7 @@ const express = require("express");
 const db = require('./db');
 const path = require("path");
 const app = express();
+const fs = require('node:fs');
 app.use(express.static(path.join(__dirname,"./public")));
 app.use(express.static(path.join(__dirname,"./node_modules")));
 app.use(express.urlencoded({
@@ -11,7 +12,7 @@ app.get("/",
 async (req,res)=>{
     await res.sendFile(path.resolve(__dirname,"./public/index.html"));
 })
-
+var artCount = 0;
 app.get('/articles', async (req, res) => {
     try {
         const result = await db.query('SELECT * FROM users');
@@ -24,7 +25,15 @@ app.get('/articles', async (req, res) => {
 
 app.post("/upload",
  (req,res)=>{
-    console.log(req.body.title);
+    //replace with postgresql database
+    const content = req.body.title+"\n"+req.body.img;
+    fs.writeFile('/Users/ISK-Website/Article'+artCount++, content, err => {
+      if (err) {
+        console.error(err);
+      } else {
+        // file written successfully
+      }
+    });
     res.sendFile(path.resolve(__dirname,"./public/index.html"));
 }
 )
