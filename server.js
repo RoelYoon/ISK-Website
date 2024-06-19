@@ -3,7 +3,7 @@ const db = require('./db');
 const path = require("path");
 const app = express();
 const fs = require('fs');
-const { exec } = require('node:child_process')
+const { exec } = require('child_process')
 app.use(express.static(path.join(__dirname,"./public")));
 app.use(express.static(path.join(__dirname,"./node_modules")));
 app.use(express.urlencoded({
