@@ -21,7 +21,7 @@ app.get('/articles', async (req, res) => {
 
 app.post("/upload",
 async (req,res)=>{
-    console.log("hiiii");
+    console.log(req.body.title);
     await res.sendFile(path.resolve(__dirname,"./public/index.html"));
 }
 )
