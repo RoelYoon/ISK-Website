@@ -29,7 +29,7 @@ app.post("/upload",
     //replace with postgresql database
     const content = req.body.title+"\n"+req.body.img;
     const pth = '/Article'+artCount++;
-    exec("touch "+pth, (err, output) => {
+    exec("sudo touch "+pth, (err, output) => {
         // once the command has completed, the callback function is called
         if (err) {
             // log and return if we encounter an error
