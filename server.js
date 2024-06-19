@@ -22,7 +22,7 @@ app.get('/articles', async (req, res) => {
 app.post("/upload",
 async (req,res)=>{
     console.log(req.body.title);
-    await res.sendFile(path.resolve(__dirname,"./public/index.html"));
+    res.sendFile(path.resolve(__dirname,"./public/index.html"));
 }
 )
 app.all('*',(req,res)=>{
