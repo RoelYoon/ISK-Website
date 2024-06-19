@@ -24,10 +24,15 @@ app.get('/articles', async (req, res) => {
 });
 
 app.post("/upload",
- (req,res)=>{
+ async (req,res)=>{
+    try{
     //replace with postgresql database
-    db.query('INSERT INTO article VALUES('+req.body.title+","+req.body.img+")");
+    await db.query('INSERT INTO article VALUES('+req.body.title+","+req.body.img+")");
     res.sendFile(path.resolve(__dirname,"./public/index.html"));
+    }catch (err){
+        console.error(err);
+        res.statusMessage(500).send('Internal Server Error');
+    }
 }
 )
 app.all('*',(req,res)=>{
