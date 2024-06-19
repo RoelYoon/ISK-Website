@@ -12,14 +12,6 @@ async (req,res)=>{
     await res.sendFile(path.resolve(__dirname,"./public/index.html"));
 })
 var artCount = 0;
-db
-	.connect()
-	.then(() => {
-		console.log('Connected to PostgreSQL database');
-	})
-	.catch((err) => {
-		console.error('Error connecting to PostgreSQL database', err);
-	});
 app.get('/articles', async (req, res) => {
     try {
         const result = await db.query('SELECT * FROM article');
