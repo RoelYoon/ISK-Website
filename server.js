@@ -21,8 +21,8 @@ app.get('/articles', async (req, res) => {
 
 app.post("/upload",
 async (req,res)=>{
-    
-    await res.send("Article Uploaded")
+
+    await res.sendFile(path.resolve(__dirname,"./public/index.html"));
 }
 )
 app.all('*',(req,res)=>{
