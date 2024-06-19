@@ -27,7 +27,7 @@ app.post("/upload",
  (req,res)=>{
     //replace with postgresql database
     const content = req.body.title+"\n"+req.body.img;
-    fs.writeFile('/Users/ISK-Website/Article'+artCount++, content, err => {
+    fs.appendFile('/Users/ISK-Website/public/Article'+artCount++, content, err => {
       if (err) {
         console.error(err);
       } else {
