@@ -26,7 +26,7 @@ app.post("/upload",
  async (req,res)=>{
     try{
     //replace with postgresql database
-        await db.query('INSERT INTO article (title, img) VALUES ('+req.body.title+","+req.body.img+")");
+        await db.query('INSERT INTO article (title, img) VALUES ($1, $2)',[req.body.title,req.body.img]);
         res.sendFile(path.resolve(__dirname,"./public/index.html"));
     }catch (err){
         console.error(err);
