@@ -1,3 +1,4 @@
+require('dotenv').config()
 function displayArticle(article){
     var a = document.createElement('a');            
     var link = document.createTextNode(article.title);
@@ -16,8 +17,7 @@ function httpGetAsync(theUrl, callback){
     xmlHttp.send(null);
 
 }
-
-httpGetAsync("http://35.203.145.230:8099/articles",(res)=>{
+httpGetAsync(process.env.ADDRESS+"articles",(res)=>{
     var js = JSON.parse(res);
     js.sort(function(a,b){
         var yearA = parseInt(a.date.substring(0,4));
