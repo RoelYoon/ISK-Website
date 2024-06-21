@@ -28,14 +28,15 @@ httpGetAsync("http://35.203.145.230:8099/articles",(res)=>{
             if(monthA==monthB){
                 var dayA = parseInt(a.date.substring(8,10));
                 var dayB = parseInt(b.date.substring(8,10));
-                return dayA > dayB;
+                return dayA < dayB;
             }else{
-                return monthA > monthB;
+                return monthA < monthB;
             }
         }else{
-            return yearA > yearB;
+            return yearA < yearB;
         }
     })
+    console.log(js);
     for(var i = 0; i < js.length; i++){
         displayArticle(js[i]);
         document.body.appendChild(document.createElement("br"));
