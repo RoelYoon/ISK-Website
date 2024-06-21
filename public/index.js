@@ -16,6 +16,7 @@ function httpGetAsync(theUrl, callback){
     xmlHttp.send(null);
 
 }
+document.write("<br>");
 httpGetAsync("http://35.203.145.230:8099/articles",(res)=>{
     var js = JSON.parse(res);
     console.log(js);
