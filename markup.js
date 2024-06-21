@@ -2,6 +2,7 @@ function convertContent(content){
     var result = "";
     var p = 0;
     crossOriginIsolated.log(content.substring(p++));
+    return result;
 }
 function convert(article){
     var html = `
