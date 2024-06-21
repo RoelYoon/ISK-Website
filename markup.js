@@ -2,7 +2,7 @@ function convertContent(content){
     var result = "";
     var p = 0;
     var stack = [];
-    const keywords = ['#bf{','#it{','#ref{','#GDimg{','#img{','{','}']
+    const keywords = ['#bf{','#it{','#ref{','#GDimg{','#img{','{','###','}']
     const idMap = new Map([
         ['#bf{', 0], 
         ['#it{', 1],
@@ -10,7 +10,8 @@ function convertContent(content){
         ['#GDimg{', 3],
         ['#img{', 4], 
         ['{', 5],
-        ['}', 6],
+        ['###',6],
+        ['}', 7]
     ]);
     const open = new Map([
         [0,'<strong>'], 
@@ -19,7 +20,8 @@ function convertContent(content){
         [3,''],
         [4,'<img src=\''], 
         [5,''],
-        [6,''],
+        [6,'<br>'],
+        [7,'']
     ]);
     const close = new Map([
         [0,'</strong>'], 
@@ -28,7 +30,8 @@ function convertContent(content){
         [3,''],
         [4,'\'/>'], 
         [5,'</a>'],
-        [6,''],
+        [6,'X'],
+        [7,'X']
     ]);
     while(p<content.length-1){
         var c = content.substring(p);
@@ -50,7 +53,9 @@ function convertContent(content){
         result+=selected;
         if(type!='}'){
             var id = idMap.get(type);
-            stack.push(id);
+            if(close.get(id)!='X'){
+                stack.push(id);
+            }
             result+=open.get(id);
         }else{
             var id = stack.pop();
