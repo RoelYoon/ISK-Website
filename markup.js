@@ -72,12 +72,12 @@ function convert(article){
         </head>
         <body>
             <h1>${article.title}</h1>
-            <h3>${article.author}<h3>
-            <h4>${article.date}<h4>
+            <h3>${article.author}</h3>
+            <h4>${article.date}</h4>
             <br>
             <img src=${article.img}>
             <br>
-            <p>${convertContent(article.content)}<p>
+            <p>${convertContent(article.content)}</p>
         </body>
     </html>
     `;
