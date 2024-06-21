@@ -10,12 +10,12 @@ function httpGetAsync(theUrl, callback){
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            callback(xmlHttp.responseText);
+            callback(xmlHttp.response);
     }
     xmlHttp.open("GET", theUrl, true); // true for asynchronous 
     xmlHttp.send(null);
 
 }
 httpGetAsync("http://35.203.145.230:8099/articles",(res)=>{
-    console.log(res);
+    console.log(res.body.img);
 });
