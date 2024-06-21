@@ -2,12 +2,12 @@ function convertContent(content){
     var result = "";
     var p = 0;
     var stack = [];
-    const keywords = ['#bf{','#it{','#ref{','#GDimg{','#img{','{','###','}']
+    const keywords = ['#bf{','#it{','#ref{','#html{','#img{','{','###','}']
     const idMap = new Map([
         ['#bf{', 0], 
         ['#it{', 1],
         ['#ref{', 2], 
-        ['#GDimg{', 3],
+        ['#html{', 3],
         ['#img{', 4], 
         ['{', 5],
         ['###',6],
