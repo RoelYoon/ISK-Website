@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="/styles.css"/>
     </head>
     <body>
-        <form method="POST" action="/upload">
+        <form id="uploadForm" method="POST" action="/upload">
             <label for="title">Title:</label>
             <input type="text" id="title" name="title"><br><br>
             <label for="img">Image URL:</label>
@@ -13,5 +13,11 @@
             <input type="submit" value="Submit">
           </form>
     </body>
-    <script type="module" src="/index.js"></script>
+    <script type="module">
+        var form = document.querySelector("#uploadForm");
+        form.submit(function(e){
+            // do ajax now
+            window.location.href = "http://35.203.145.230:8099/";
+        });
+    </script>
 </html>
