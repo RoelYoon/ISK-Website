@@ -1,9 +1,9 @@
-function uploadArticle(){
-    var a = document.createElement('a');               
-    var link = document.createTextNode("This is link");
+function displayArticle(article){
+    var a = document.createElement('a');            
+    var link = document.createTextNode(article.title);
     a.appendChild(link); 
-    a.title = "This is Link"; 
-    a.href = "https://www.geeksforgeeks.org"; 
+    a.title = article.title; 
+    a.href = article.img; 
     document.body.appendChild(a); 
 }
 function httpGetAsync(theUrl, callback){
@@ -16,7 +16,10 @@ function httpGetAsync(theUrl, callback){
     xmlHttp.send(null);
 
 }
+
 httpGetAsync("http://35.203.145.230:8099/articles",(res)=>{
     var js = JSON.parse(res);
-    console.log(js[0].title);
+    for(var i = 0; i < js.length; i++){
+        displayArticle(js[i]);
+    }
 });
