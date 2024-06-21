@@ -43,6 +43,7 @@ app.get('/articleHTML', async (req, res) => {
             <body>
                 <h1>${article.title}</h1>
             </body>
+        </html>
         `
         );
     } catch (err) {
