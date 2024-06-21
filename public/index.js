@@ -1,10 +1,10 @@
-require('dotenv').config()
+var address=window.location.href;
 function displayArticle(article){
     var a = document.createElement('a');            
     var link = document.createTextNode(article.title);
     a.appendChild(link); 
     a.title = article.title; 
-    a.href = "http://35.203.145.230:8099/articles?id="+article.id; 
+    a.href = `${address}/articles?id=${article.id}`;
     document.body.appendChild(a); 
 }
 function httpGetAsync(theUrl, callback){
@@ -15,9 +15,8 @@ function httpGetAsync(theUrl, callback){
     }
     xmlHttp.open("GET", theUrl, true); // true for asynchronous 
     xmlHttp.send(null);
-
 }
-httpGetAsync(process.env.ADDRESS+"articles",(res)=>{
+httpGetAsync(`${address}/articles`,(res)=>{
     var js = JSON.parse(res);
     js.sort(function(a,b){
         var yearA = parseInt(a.date.substring(0,4));
