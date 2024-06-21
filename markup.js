@@ -1,14 +1,8 @@
-var template = `
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>ISK Website</title>
-        <link rel="stylesheet" href="/styles.css"/>
-    </head>
-    <body>
-    </body>
-</html>
-`
+function convertContent(content){
+    var result = "";
+    var p = 0;
+    crossOriginIsolated.log(content.substring(p++));
+}
 function convert(article){
     var html = `
     <!DOCTYPE html>
@@ -20,11 +14,11 @@ function convert(article){
         <body>
             <h1>${article.title}</h1>
             <h3>${article.author}<h3>
-            <h4>${article.date}<h4>f
+            <h4>${article.date}<h4>
             <br>
             <img src=${article.img}>
             <br>
-            <p>${article.content}<p>
+            <p>${convertContent(article.content)}<p>
         </body>
     </html>
     `;
