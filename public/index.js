@@ -17,5 +17,5 @@ function httpGetAsync(theUrl, callback){
 
 }
 httpGetAsync("http://35.203.145.230:8099/articles",(res)=>{
-    console.log(res.body.img);
+    console.log(res.body.title);
 });
