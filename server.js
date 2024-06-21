@@ -12,7 +12,7 @@ app.get("/",
 async (req,res)=>{
     await res.sendFile(path.resolve(__dirname,"./public/index.html"));
 })
-app.get('/articles', async (req, res) => {
+app.get('/article', async (req, res) => {
     try {
         result="";
         if(req.query.id){
@@ -25,6 +25,16 @@ app.get('/articles', async (req, res) => {
             result = await db.query('SELECT * FROM article');
         }
         res.json(result.rows);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
+});
+app.get('/articleHTML', async (req, res) => {
+    try {
+        const result = await db.query(`SELECT * FROM article WHERE id=${req.query.id}`)
+
+        res.send(`<h1>ffisodajfioa</h1>`);
     } catch (err) {
         console.error(err);
         res.status(500).send('Internal Server Error');

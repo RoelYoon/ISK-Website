@@ -1,11 +1,10 @@
 var address=window.location.href;
-console.log(`${address}articles`);
 function displayArticle(article){
     var a = document.createElement('a');            
     var link = document.createTextNode(article.title);
     a.appendChild(link); 
     a.title = article.title; 
-    a.href = `${address}articles?id=${article.id}`;
+    a.href = `${address}articleHTML?id=${article.id}`;
     document.body.appendChild(a); 
 }
 function httpGetAsync(theUrl, callback){
@@ -17,7 +16,7 @@ function httpGetAsync(theUrl, callback){
     xmlHttp.open("GET", theUrl, true); // true for asynchronous 
     xmlHttp.send(null);
 }
-httpGetAsync(`${address}articles`,(res)=>{
+httpGetAsync(`${address}article`,(res)=>{
     var js = JSON.parse(res);
     js.sort(function(a,b){
         var yearA = parseInt(a.date.substring(0,4));
