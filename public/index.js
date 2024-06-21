@@ -24,7 +24,6 @@ document.onreadystatechange = () => {
             for(var i = 0; i < js.length; i++){
                 console.log(js[i]);
                 displayArticle(js[i]);
-                document.write("<br>");
             }
         });
     }
