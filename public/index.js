@@ -33,6 +33,7 @@ httpGetAsync("http://35.203.145.230:8099/articles",(res)=>{
                 return monthA > monthB;
             }
         }else{
+            console.log(yearA>yearB);
             return yearA > yearB;
         }
     })
