@@ -46,6 +46,7 @@ function convertContent(content){
             break;
         }
         var selected = content.substring(p+type.length,minInd+1);
+        p=minInd;
         result+=selected;
         if(type!='}'){
             var id = idMap.get(type);
