@@ -21,5 +21,6 @@ httpGetAsync("http://35.203.145.230:8099/articles",(res)=>{
     var js = JSON.parse(res);
     for(var i = 0; i < js.length; i++){
         displayArticle(js[i]);
+        document.write("<br>");
     }
 });
