@@ -1,7 +1,9 @@
 function convertContent(content){
     var result = "";
     var p = 0;
+    while(p<content.length){
     console.log(content.substring(p++));
+    }
     return result;
 }
 function convert(article){
