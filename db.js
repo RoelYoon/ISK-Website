@@ -14,6 +14,7 @@ const pool = new Pool({
   port: 0,
   database: 'ISK'
 });
+console.log(process.env.DB_HOST)
 module.exports = {
   query: (text, params) => pool.query(text, params)
 };
