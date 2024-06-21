@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="/styles.css"/>
     </head>
     <body>
+        <h2>Article Uploader</h2>
         <form id="uploadForm" method="POST" action="/upload">
             <label for="title">Title:</label>
             <input type="text" id="title" name="title"><br><br>
@@ -31,10 +32,16 @@
             
             <input type="submit" value="Submit">
           </form>
-          <h2>Mark-Up Reference Table</h2>
+          <h3>Mark-Up Reference Table</h3>
           <p>#bf{Boldface} --> <strong>Boldface</strong></p>
           <p>#it{Italics} --> <em>Italics</em></p>
           <p>#ref{Hyperlink}{https://www.youtube.com/watch?v=dQw4w9WgXcQ} --> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Hyperlink</a></p>
-    </body>
+          <h2>Article Deleter</h2>
+          <form id="uploadForm" method="POST" action="/delete">
+            <label for="id">Article ID:</label>
+            <input type="number" id="id" name="id"><br><br>
+            <input type="submit" value="Submit">
+          </form>
+        </body>
 
 </html>
