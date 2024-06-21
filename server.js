@@ -14,8 +14,12 @@ async (req,res)=>{
 var artCount = 0;
 app.get('/articles', async (req, res) => {
     try {
-        const result = await db.query('SELECT * FROM article');
-        res.json(result.rows);
+        if(!req.query.id){
+            const result = await db.query('SELECT * FROM article');
+            res.json(result.rows);
+        }else{
+            res.send(req.query.id);
+        }
     } catch (err) {
         console.error(err);
         res.status(500).send('Internal Server Error');
@@ -25,7 +29,6 @@ app.get('/articles', async (req, res) => {
 app.post("/upload",
  async (req,res)=>{
     try{
-    //replace with postgresql database
         await db.query('INSERT INTO article (title, author, date, img, category, content) VALUES ($1,$2,$3,$4,$5,$6)',[req.body.title,req.body.author,req.body.date,req.body.img,req.body.category,req.body.content]);
         res.redirect("http://35.203.145.230:8099/");
     }catch (err){
