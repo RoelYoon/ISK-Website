@@ -16,15 +16,12 @@ function httpGetAsync(theUrl, callback){
     xmlHttp.send(null);
 
 }
-document.onreadystatechange = () => {
-    if (document.readyState === 'complete') {
-        httpGetAsync("http://35.203.145.230:8099/articles",(res)=>{
-            var js = JSON.parse(res);
-            console.log(js);
-            for(var i = 0; i < js.length; i++){
-                console.log(js[i]);
-                displayArticle(js[i]);
-            }
-        });
+
+httpGetAsync("http://35.203.145.230:8099/articles",(res)=>{
+    var js = JSON.parse(res);
+    console.log(js);
+    for(var i = 0; i < js.length; i++){
+        displayArticle(js[i]);
+        document.body.appendChild(document.createElement("br"));
     }
-  };
+});
