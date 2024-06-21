@@ -26,8 +26,7 @@ app.post("/upload",
  async (req,res)=>{
     try{
     //replace with postgresql database
-        console.log(req.body.date);
-        await db.query('INSERT INTO article (title, img) VALUES ($1, $2)',[req.body.title,req.body.img]);
+        await db.query('INSERT INTO article (title, author, date, img, category, content) VALUES ($1,$2,$3,$4,$5,$6)',[req.body.title,req.body.author,req.body.date,req.body.img,req.body.category,req.body.content]);
         res.redirect("http://35.203.145.230:8099/");
     }catch (err){
         console.error(err);

@@ -3,7 +3,7 @@ function displayArticle(article){
     var link = document.createTextNode(article.title);
     a.appendChild(link); 
     a.title = article.title; 
-    a.href = article.img; 
+    a.href = "http://35.203.145.230:8099/"+article.id; 
     document.body.appendChild(a); 
 }
 function httpGetAsync(theUrl, callback){
