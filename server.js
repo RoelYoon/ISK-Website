@@ -27,7 +27,7 @@ app.get('/articles', async (req, res) => {
     }
 });
 app.get(`/${process.env.KEY}`,async(req,res)=>{
-    await res.sendFile(path.resolve(__dirname,"./public/upload.html"));
+    await res.sendFile(path.resolve(__dirname,"./upload.html"));
 })
 app.post(`/upload`,
  async (req,res)=>{
