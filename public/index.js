@@ -1,4 +1,5 @@
 var address=window.location.href;
+console.log(address);
 function displayArticle(article){
     var a = document.createElement('a');            
     var link = document.createTextNode(article.title);
