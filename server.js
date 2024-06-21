@@ -32,9 +32,8 @@ app.get('/article', async (req, res) => {
 });
 app.get('/articleHTML', async (req, res) => {
     try {
-        const result = await db.query(`SELECT * FROM article WHERE id=${req.query.id}`)
-
-        res.send(`<h1>ffisodajfioa</h1>`);
+        const article = await db.query(`SELECT * FROM article WHERE id=${req.query.id}`)
+        res.send(`<h1>${article.title}</h1>`);
     } catch (err) {
         console.error(err);
         res.status(500).send('Internal Server Error');
