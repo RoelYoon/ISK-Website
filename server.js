@@ -27,7 +27,7 @@ app.post("/upload",
     try{
     //replace with postgresql database
         await db.query('INSERT INTO article (title, img) VALUES ($1, $2)',[req.body.title,req.body.img]);
-        res.sendFile(path.resolve(__dirname,"./public/index.html"));
+        res.redirect("http://35.203.145.230:8099/");
     }catch (err){
         console.error(err);
         res.statusMessage(500).send('Internal Server Error');
