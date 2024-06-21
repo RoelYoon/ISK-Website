@@ -19,6 +19,7 @@ function httpGetAsync(theUrl, callback){
 
 httpGetAsync("http://35.203.145.230:8099/articles",(res)=>{
     var js = JSON.parse(res);
+    console.log(parseInt(js[0].date));
     console.log(parseInt(js[0].date.substring(0,4)));
     console.log(parseInt(js[0].date.substring(5,2)));
     console.log(parseInt(js[0].date.substring(8,2)));
