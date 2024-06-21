@@ -18,7 +18,7 @@ app.get('/articles', async (req, res) => {
             const result = await db.query('SELECT * FROM article');
             res.json(result.rows);
         }else{
-            const result = await db.query(`query ${req.query.id} FROM article`)
+            const result = await db.query(`SELECT * FROM article WHERE id=${req.query.id}`)
             res.json(result);
         }
     } catch (err) {
