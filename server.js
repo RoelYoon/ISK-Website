@@ -32,7 +32,7 @@ app.get('/article', async (req, res) => {
 });
 app.get('/articleHTML', async (req, res) => {
     try {
-        const article = json((await db.query(`SELECT * FROM article WHERE id=${req.query.id}`)).rows)
+        const article = (await db.query(`SELECT * FROM article WHERE id=${req.query.id}`)).rows
         console.log(article);
         res.send(`<h1>${article.title}</h1>`);
     } catch (err) {
