@@ -18,6 +18,7 @@ function httpGetAsync(theUrl, callback){
 }
 httpGetAsync("http://35.203.145.230:8099/articles",(res)=>{
     var js = JSON.parse(res);
+    console.log(js);
     for(var i = 0; i < js.length; i++){
         displayArticle(js[i]);
         document.write("<br>");
