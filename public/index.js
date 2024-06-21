@@ -37,7 +37,6 @@ httpGetAsync(`${address}articles`,(res)=>{
             return yearA > yearB ? 1 : -1;
         }
     })
-    console.log(js);
     for(var i = 0; i < js.length; i++){
         displayArticle(js[i]);
         document.body.appendChild(document.createElement("br"));

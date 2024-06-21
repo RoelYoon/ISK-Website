@@ -14,13 +14,17 @@ async (req,res)=>{
 })
 app.get('/articles', async (req, res) => {
     try {
-        if(!req.query.id){
-            const result = await db.query('SELECT * FROM article');
-            res.json(result.rows);
-        }else{
-            const result = await db.query(`SELECT * FROM article WHERE id=${req.query.id}`)
-            res.json(result.rows);
+        result="";
+        if(req.query.id){
+            result = await db.query(`SELECT * FROM article WHERE id=${req.query.id}`)
         }
+        if(req.query.category){
+            result = await db.query(`SELECT * FROM article WHERE category=${req.query.category}`)
+        }
+        if(result==""){
+            result = await db.query('SELECT * FROM article');
+        }
+        res.json(result.rows);
     } catch (err) {
         console.error(err);
         res.status(500).send('Internal Server Error');
