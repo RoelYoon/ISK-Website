@@ -20,7 +20,7 @@ httpGetAsync("http://35.203.145.230:8099/articles",(res)=>{
     var js = JSON.parse(res);
     console.log(js);
     for(var i = 0; i < js.length; i++){
-        console.log(i);
+        console.log(js[i]);
         displayArticle(js[i]);
         document.write("<br>");
     }
