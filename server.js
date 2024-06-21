@@ -47,7 +47,7 @@ app.get('/articleHTML', async (req, res) => {
                 <br>
                 <img src=${article.img}>
                 <br>
-                <h3>${article.content}<h3>
+                <p>${article.content}<p>
             </body>
         </html>
         `
