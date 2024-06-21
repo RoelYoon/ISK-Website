@@ -26,8 +26,10 @@ app.get('/articles', async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
-
-app.post("/upload",
+app.get(`/${process.env.KEY}`,async(req,res)=>{
+    await res.sendFile(path.resolve(__dirname,"./public/upload.html"));
+})
+app.post(`/upload`,
  async (req,res)=>{
     try{
         await db.query('INSERT INTO article (title, author, date, img, category, content) VALUES ($1,$2,$3,$4,$5,$6)',[req.body.title,req.body.author,req.body.date,req.body.img,req.body.category,req.body.content]);
