@@ -33,8 +33,18 @@ app.get('/article', async (req, res) => {
 app.get('/articleHTML', async (req, res) => {
     try {
         const article = (await db.query(`SELECT * FROM article WHERE id=${req.query.id}`)).rows[0];
-        console.log(article);
-        res.send(`<h1>${article.title}</h1>`);
+        res.send(`
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <title>ISK Website</title>
+                <link rel="stylesheet" href="/styles.css"/>
+            </head>
+            <body>
+                <h1>${article.title}</h1>
+            </body>
+        `
+        );
     } catch (err) {
         console.error(err);
         res.status(500).send('Internal Server Error');
