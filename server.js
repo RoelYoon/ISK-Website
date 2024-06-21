@@ -42,8 +42,8 @@ app.get('/articleHTML', async (req, res) => {
             </head>
             <body>
                 <h1>${article.title}</h1>
-                <h2>${article.author}<h2>
-                <h2>${article.date}<h2>
+                <h3>${article.author}<h3>
+                <h4>${article.date}<h4>
                 <br>
                 <img src=${article.img}>
                 <br>
