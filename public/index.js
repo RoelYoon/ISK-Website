@@ -28,13 +28,13 @@ httpGetAsync("http://35.203.145.230:8099/articles",(res)=>{
             if(monthA==monthB){
                 var dayA = parseInt(a.date.substring(8,10));
                 var dayB = parseInt(b.date.substring(8,10));
-                return dayA > dayB;
+                return dayA < dayB ? 1 : -1;
             }else{
-                return monthA > monthB;
+                return monthA < monthB ? 1 : -1;
             }
         }else{
             console.log(yearA<yearB);
-            return yearA < yearB;
+            return yearA < yearB ? 1 : -1;
         }
     })
     console.log(js);
