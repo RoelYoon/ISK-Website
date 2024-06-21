@@ -24,13 +24,13 @@ function convertContent(content){
     const close = new Map([
         [0,'</strong>'], 
         [1,'</em>'],
-        [2,'>'], 
+        [2,'\'>'], 
         [3,''],
-        [4,'/>'], 
+        [4,'\'/>'], 
         [5,'</a>'],
         [6,''],
     ]);
-    while(p<content.length){
+    while(p<content.length-1){
         var c = content.substring(p);
         var minInd = 1000000000;
         var type = "";
@@ -45,8 +45,8 @@ function convertContent(content){
             result+=c;
             break;
         }
-        var selected = content.substring(p+type.length,minInd+1);
-        p=minInd;
+        var selected = content.substring(p,p+minInd);
+        p+=minInd+type.length;
         result+=selected;
         if(type!='}'){
             var id = idMap.get(type);
@@ -56,6 +56,9 @@ function convertContent(content){
             var id = stack.pop();
             result+=close.get(id);
         }
+    }
+    while(stack.length>0){
+        result+=close.get(stack.pop());
     }
     return result;
 }
