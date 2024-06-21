@@ -1,5 +1,6 @@
 const express = require("express");
 const db = require('./db');
+const markUp = require('./markup');
 const path = require("path");
 require('dotenv').config()
 const app = express();
@@ -33,25 +34,8 @@ app.get('/article', async (req, res) => {
 app.get('/articleHTML', async (req, res) => {
     try {
         const article = (await db.query(`SELECT * FROM article WHERE id=${req.query.id}`)).rows[0];
-        res.send(`
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <title>ISK Website</title>
-                <link rel="stylesheet" href="/styles.css"/>
-            </head>
-            <body>
-                <h1>${article.title}</h1>
-                <h3>${article.author}<h3>
-                <h4>${article.date}<h4>
-                <br>
-                <img src=${article.img}>
-                <br>
-                <p>${article.content}<p>
-            </body>
-        </html>
-        `
-        );
+        var html = markUp.convert(article);
+        res.send(html);
     } catch (err) {
         console.error(err);
         res.status(500).send('Internal Server Error');
