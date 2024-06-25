@@ -1,3 +1,7 @@
 body{
     background-color: #cfcccc;
 }
+@font-face {font-family: roboto_serif; src: url('/fonts/roboto_serif.ttf');} 
+html{
+    font-family: roboto_serif;
+}
