@@ -47,7 +47,7 @@ app.get(`/${process.env.KEY}`,async(req,res)=>{
 app.post(`/upload`,
     async (req,res)=>{
         try{
-            await db.query('INSERT INTO article (title, author, date, img, category, content) VALUES ($1,$2,$3,$4,$5,$6)',[req.body.title,req.body.author,req.body.date,req.body.img,req.body.category,req.body.content]);
+            await db.query('INSERT INTO article (title, author, date, img, category, content, views) VALUES ($1,$2,$3,$4,$5,$6,0)',[req.body.title,req.body.author,req.body.date,req.body.img,req.body.category,req.body.content]);
             res.redirect(process.env.ADDRESS);
         }catch (err){
             console.error(err);
