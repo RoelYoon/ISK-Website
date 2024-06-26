@@ -73,7 +73,7 @@ async function authorize() {
 async function printDocTitle(auth) {
   const docs = google.docs({version: 'v1', auth});
   const res = await docs.documents.get({
-    documentId: '195j9eDD3ccgjQRttHhJPymLJUCOUjs-jmwTrekvdjFE',
+    documentId: '11VBYKPE8mLxgNQrC0dwvZtEbDWIhGsky325NH5NRCec',
   });
   console.log(`The title of the document is: ${res.data.title}`);
 }
