@@ -97,13 +97,13 @@ function docDataConvert(data){
             <link rel="stylesheet" href="/styles.css"/>
         </head>
         <body>
-            <h1>${article.title}</h1>
-            <h3>${article.author}</h3>
-            <h4>${article.date}</h4>
+            <h1>${data.title}</h1>
+            <h3>${data.author}</h3>
+            <h4>${data.date}</h4>
             <br>
-            <img src=${article.img}>
+            <img src=${data.img}>
             <br>
-            ${article.content}
+            ${data.content}
         </body>
     </html>
     `;
