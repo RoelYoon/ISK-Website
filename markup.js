@@ -102,9 +102,7 @@ function docDataConvert(data){
             <h1 id="title">${data.title}</h1>
             <h3 id="author">${data.author}</h3>
             <h4 id="date">${data.date}</h4>
-            <br>
             <img id="headImg" src=${data.img}>
-            <br>
             ${data.content}
         </body>
     </html>
