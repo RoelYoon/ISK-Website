@@ -3,3 +3,4 @@
 .env
 ISK_CREDENTIALS.json
 token.json
+test.js
