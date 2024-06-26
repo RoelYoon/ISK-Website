@@ -32,3 +32,6 @@ ul{
     position: fixed;
     z-index: -5;
 }
+#category-menu{
+    display:none;
+}
