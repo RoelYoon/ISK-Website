@@ -78,6 +78,9 @@ function uploadArticles() {
             for(var i = 0; i < res.data.files.length; i++){
                 var file = res.data.files[i];
                 drive.drivePATCH(file.id,{'name': file.name.replace("[READY]","[PUBLISHED]")});
+                drive.docGET(file.id,(res)=>{
+                    console.log(res.data)
+                })
             }
         })
         uploadArticles();
