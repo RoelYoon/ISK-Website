@@ -25,6 +25,7 @@ ul{
 #menu{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 #sidebar{
     display: flex;
