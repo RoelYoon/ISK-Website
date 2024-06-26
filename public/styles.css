@@ -22,6 +22,10 @@ html{
 ul{
     list-style-type: none;
 }
+#menu{
+    display: flex;
+    flex-direction: column;
+}
 #sidebar{
     display: flex;
     width: 100px;
