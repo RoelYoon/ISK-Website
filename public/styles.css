@@ -14,8 +14,9 @@ html{
     text-align: center;
 }
 #navbar{
-    position: sticky;
+    position: flex;
     margin-right: 10px;
+    text-align: right;
 }
 ul{
     list-style-type: none;
