@@ -84,3 +84,4 @@ function uploadArticles() {
         uploadArticles();
     }, 100)
 }
+uploadArticles();
