@@ -96,7 +96,7 @@ function docDataConvert(data){
         <head>
             <title>ISK Website</title>
             <link rel="stylesheet" href="/styles.css"/>
-            <link rel="icon" href="https://drive.usercontent.google.com/download?id=1kQsVUom3mBNpqu0e34rbcsGOJExYY4NI">
+            <link rel="icon" href="https://drive.google.com/uc?id=1kQsVUom3mBNpqu0e34rbcsGOJExYY4NI">
         </head>
         <body>
             <h1>${data.title}</h1>
