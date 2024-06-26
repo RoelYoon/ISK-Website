@@ -74,13 +74,24 @@ async function docGET(auth, id, cb) {
 }
 
 async function driveGET(auth, query, cb){
-    google.options({auth})
-    const drive = google.drive('v3');
+    const drive = google.drive({version:'v3',auth});
     const params = {q:query};
     const res = await drive.files.list(params);
     cb(res);
 }
+
+async function drivePATCH(auth, id, patch){
+    const drive = google.drive({version: 'v3', auth});
+    drive.files.update({
+      fileId: id,
+      resource: patch
+    }, (err, res) => {
+        if (err) return console.log(err);
+    });
+}
+
 module.exports = {
     docGET: async(id, cb) => await authorize().then(client => {docGET(client,id,cb)}),
-    driveGET: async(query, cb) => await authorize().then(client => {driveGET(client,query,cb)})
+    driveGET: async(query, cb) => await authorize().then(client => {driveGET(client,query,cb)}),
+    drivePATCH: async(id, patch) => await authorize().then(client => {drivePATCH(client,id,patch)})
 };
