@@ -51,34 +51,26 @@ async function saveCredentials(client) {
  *
  */
 async function authorize() {
-  let client = await loadSavedCredentialsIfExist();
-  if (client) {
+    let client = await loadSavedCredentialsIfExist();
+    if (client) {
+      return client;
+    }
+    client = await authenticate({
+      scopes: SCOPES,
+      keyfilePath: CREDENTIALS_PATH,
+    });
+    if (client.credentials) {
+      await saveCredentials(client);
+    }
     return client;
   }
-  client = await authenticate({
-    scopes: SCOPES,
-    keyfilePath: CREDENTIALS_PATH,
-  });
-  if (client.credentials) {
-    await saveCredentials(client);
-  }
-  return client;
-}
-
-/**
- * Prints the title of a sample doc:
- * https://docs.google.com/document/d/195j9eDD3ccgjQRttHhJPymLJUCOUjs-jmwTrekvdjFE/edit
- * @param {google.auth.OAuth2} auth The authenticated Google OAuth 2.0 client.
- */
-async function printDocTitle(auth) {
-console.log("hi");
+async function docGET(auth, id, cb) {
   const docs = google.docs({version: 'v1', auth});
   const res = await docs.documents.get({
-    documentId: '11VBYKPE8mLxgNQrC0dwvZtEbDWIhGsky325NH5NRCec',
+    documentId: id,
   });
-  console.log(`The title of the document is: ${res.data.title}`);
+  cb(res);
 }
-
 module.exports = {
-    printDocTitle: () => authorize().then(printDocTitle).catch(console.error)
-  };
+    docGET: async(id, cb) => await authorize().then(client => {docGET(client,id,cb)})
+};
