@@ -20,4 +20,6 @@ img{
 #title,#author,#date{
     text-align: center;
 }
-
+#content{
+    max-width:50%;
+}
