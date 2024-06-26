@@ -90,8 +90,57 @@ async function drivePATCH(auth, id, patch){
     });
 }
 
+function extract(res){
+    var data = {
+        "title" : "",
+        "author": "",
+        "date": "",
+        "category":"",
+        "img": "X",
+        "html": "<p>"
+    }
+    var level = 0;
+    var dataSet = false;
+    let contents = res.data.body.content;
+    for(var i = 0; i < contents.length; ++i){
+        if(!contents[i].paragraph){continue;}
+        let elements = contents[i].paragraph.elements;
+        for(var j = 0; j < elements.length; ++j){
+            if(elements[j].textRun){
+                dataSet=true;
+                for(var key in data){
+                    if(data[key]===""){
+                        data[key]=elements[j].textRun.content.replace("\n","");
+                        dataSet=false;
+                        break;
+                    }
+                }
+                if(!dataSet){continue;}
+                let style = elements[j].textRun.textStyle;
+                data.html+=(style.link?`<a href=${style.link.url}>`:``) + 
+                (style.bold?`<strong>`:``) +
+                (style.italic?`<em>`:``) +
+                elements[j].textRun.content.replace("\n","<br>") +
+                (style.italic?`</em>`:``) +
+                (style.bold?`</strong>`:``) +
+                (style.link?`</a>`:``);
+            }
+            if(elements[j].inlineObjectElement){
+                if(data.img!=="X"){
+                    data.html+=`<img src=${res.data.inlineObjects[elements[j].inlineObjectElement.inlineObjectId].inlineObjectProperties.embeddedObject.imageProperties.sourceUri}/>`;
+                }else{
+                    data.img=`${res.data.inlineObjects[elements[j].inlineObjectElement.inlineObjectId].inlineObjectProperties.embeddedObject.imageProperties.sourceUri}`;
+                }
+            }
+        }
+    }
+    data.html+="</p>";
+    return data;
+}
+
 module.exports = {
     docGET: async(id, cb) => await authorize().then(client => {docGET(client,id,cb)}),
     driveGET: async(query, cb) => await authorize().then(client => {driveGET(client,query,cb)}),
-    drivePATCH: async(id, patch) => await authorize().then(client => {drivePATCH(client,id,patch)})
+    drivePATCH: async(id, patch) => await authorize().then(client => {drivePATCH(client,id,patch)}),
+    extract: (doc) => extract(doc)
 };
