@@ -71,6 +71,7 @@ async function authorize() {
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth 2.0 client.
  */
 async function printDocTitle(auth) {
+console.log("hi");
   const docs = google.docs({version: 'v1', auth});
   const res = await docs.documents.get({
     documentId: '11VBYKPE8mLxgNQrC0dwvZtEbDWIhGsky325NH5NRCec',
