@@ -71,3 +71,15 @@ app.all('*',(req,res)=>{
     res.send("<h1>404 boiii</h1>").status(404);
 });
 app.listen(process.env.PORT, process.env.INTERNAL_IP, ()=>{console.log(`Listening at ${process.env.ADDRESS}`)});
+
+function uploadArticles() {
+    setTimeout(() => {
+        drive.driveGET(`name contains '[READY]'`,(res)=>{
+            for(var i = 0; i < res.data.files.length; i++){
+                var file = res.data.files[i];
+                drive.drivePATCH(file.id,{'name': file.name.replace("[READY]","[PUBLISHED]")});
+            }
+        })
+        uploadArticles();
+    }, 5000)
+}
