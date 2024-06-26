@@ -2,3 +2,4 @@
 **/DS_Store
 .env
 ISK_CREDENTIALS.json
+token.json
