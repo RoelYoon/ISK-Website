@@ -81,5 +81,5 @@ function uploadArticles() {
             }
         })
         uploadArticles();
-    }, 5000)
+    }, 100)
 }
