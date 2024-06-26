@@ -17,3 +17,6 @@ html{
     position: sticky;
     margin-right: 10px;
 }
+ul{
+    list-style-type: none;
+}
