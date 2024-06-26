@@ -127,7 +127,7 @@ function extract(res){
             }
             if(elements[j].inlineObjectElement){
                 if(data.img!=="X"){
-                    data.html+=`<img src=${res.data.inlineObjects[elements[j].inlineObjectElement.inlineObjectId].inlineObjectProperties.embeddedObject.imageProperties.sourceUri}/>`;
+                    data.html+=`<img src=${res.data.inlineObjects[elements[j].inlineObjectElement.inlineObjectId].inlineObjectProperties.embeddedObject.imageProperties.sourceUri}>`;
                 }else{
                     data.img=`${res.data.inlineObjects[elements[j].inlineObjectElement.inlineObjectId].inlineObjectProperties.embeddedObject.imageProperties.sourceUri}`;
                 }
