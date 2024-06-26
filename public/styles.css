@@ -19,7 +19,8 @@ img{
     margin-left: 10%;
 }
 #title,#author,#date{
-    text-align: center;
+    margin-left: 10%;
+    max-width:70%;
 }
 #content{
     margin-left: 10%;
