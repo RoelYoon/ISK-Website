@@ -16,6 +16,7 @@ html{
 #navbar{
     position: fixed;
     margin-right: 10px;
+    top: 0;
     right: 0;
     align-items: right;
 }
