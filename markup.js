@@ -103,7 +103,7 @@ function docDataConvert(data){
             <br>
             <img src=${article.img}>
             <br>
-            ${article.html}
+            ${article.content}
         </body>
     </html>
     `;
