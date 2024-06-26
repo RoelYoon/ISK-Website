@@ -6,10 +6,16 @@ body{
 html{
     font-family: roboto_serif;
 }
-#headTitle{
-    font-family: old_london;
-    font-size: 100px;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    text-align: center;
+img{
+    max-height: 50%;
+    max-width: 70%;
+    margin-left: 10%;
+}
+#title,#author,#date{
+    margin-left: 10%;
+    max-width:70%;
+}
+#content{
+    margin-left: 10%;
+    max-width:70%;
 }

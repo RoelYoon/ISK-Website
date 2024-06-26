@@ -95,7 +95,7 @@ function docDataConvert(data){
     <html>
         <head>
             <title>ISK Website</title>
-            <link rel="stylesheet" href="/styles.css"/>
+            <link rel="stylesheet" href="/articleStyle.css"/>
             <link rel="icon" href="https://lh3.google.com/u/0/d/1kQsVUom3mBNpqu0e34rbcsGOJExYY4NI=s2048">
         </head>
         <body>
