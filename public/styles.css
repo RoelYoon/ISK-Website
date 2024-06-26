@@ -16,7 +16,9 @@ html{
 img{
     max-height: 50%;
     max-width: 80%;
-    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #title,#author,#date{
     text-align: center;
