@@ -88,7 +88,28 @@ function convert(article){
     `;
     return html;
 }
-
+function docDataConvert(data){
+    var html = `
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>ISK Website</title>
+            <link rel="stylesheet" href="/styles.css"/>
+        </head>
+        <body>
+            <h1>${article.title}</h1>
+            <h3>${article.author}</h3>
+            <h4>${article.date}</h4>
+            <br>
+            <img src=${article.img}>
+            <br>
+            ${article.html}
+        </body>
+    </html>
+    `;
+    return html;
+}
 module.exports = {
-    convert: (article) => convert(article)
+    convert: (article) => convert(article),
+    docDataConvert: (data) => docDataConvert(data)
 };
