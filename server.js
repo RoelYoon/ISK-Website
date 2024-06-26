@@ -98,6 +98,6 @@ function uploadArticles() {
             }
         })
         uploadArticles();
-    }, 100)
+    }, 5000)
 }
 uploadArticles();
