@@ -35,6 +35,15 @@ app.get('/article', async (req, res) => {
 app.get('/articleHTML', async (req, res) => {
     try {
         const article = (await db.query(`SELECT * FROM article WHERE id=${req.query.id}`)).rows[0];
+        res.send(article);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
+});
+app.get('/legacy/articleHTML', async (req, res) => {
+    try {
+        const article = (await db.query(`SELECT * FROM article WHERE id=${req.query.id}`)).rows[0];
         var html = markUp.convert(article);
         res.send(html);
     } catch (err) {
@@ -78,8 +87,13 @@ function uploadArticles() {
             for(var i = 0; i < res.data.files.length; i++){
                 var file = res.data.files[i];
                 drive.drivePATCH(file.id,{'name': file.name.replace("[READY]","[PUBLISHED]")});
-                drive.docGET(file.id,(res)=>{
-                    console.log(res.data)
+                drive.docGET(file.id,async(res)=>{
+                    try{
+                        let data = drive.extract(res);
+                        await db.query('INSERT INTO article (title, author, date, img, category, content, views) VALUES ($1,$2,$3,$4,$5,$6,0)',[data.title,data.author,data.date,data.img,data.category,data.html]);
+                    }catch (err){
+                        console.error(err);
+                    }
                 })
             }
         })
