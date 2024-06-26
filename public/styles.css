@@ -16,6 +16,7 @@ html{
 img{
     max-height: 50%;
     max-width: 80%;
+    text-align: center;
 }
 #title,#author,#date{
     text-align: center;
