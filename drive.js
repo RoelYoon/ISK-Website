@@ -78,8 +78,6 @@ async function printDocTitle(auth) {
   console.log(`The title of the document is: ${res.data.title}`);
 }
 
-authorize().then(printDocTitle).catch(console.error);
-
 module.exports = {
     printDocTitle: () => authorize().then(printDocTitle).catch(console.error)
   };

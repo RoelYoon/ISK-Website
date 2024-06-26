@@ -71,3 +71,4 @@ app.all('*',(req,res)=>{
     res.send("<h1>404 boiii</h1>").status(404);
 });
 app.listen(process.env.PORT, process.env.INTERNAL_IP, ()=>{console.log(`Listening at ${process.env.ADDRESS}`)});
+drive.printDocTitle();
