@@ -90,7 +90,7 @@ function uploadArticles() {
                 drive.docGET(file.id,async(res)=>{
                     try{
                         let data = drive.extract(res);
-                        await db.query('INSERT INTO article (title, author, date, img, category, content, views) VALUES ($1,$2,$3,$4,$5,$6,0)',[data.title,data.author.toLowerCase().trim(),data.date.trim(),data.img,data.category.toLowerCase().trim(),data.html]);
+                        await db.query('INSERT INTO article (title, author, date, img, category, content, views) VALUES ($1,$2,$3,$4,$5,$6,0)',[data.title,data.author.trim(),data.date.trim(),data.img,data.category.toLowerCase().trim(),data.html]);
                     }catch (err){
                         console.error(err);
                     }
