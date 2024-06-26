@@ -104,6 +104,13 @@ function docDataConvert(data){
             <h4 id="date">${data.date}</h4>
             <img id="headImg" src=${data.img}>
             ${data.content}
+                    <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/business.html">News</a></li>
+                <li><a href="/about.html">Contact</a></li>
+            </ul>
+        </nav>
         </body>
     </html>
     `;
