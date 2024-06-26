@@ -14,5 +14,6 @@ html{
     text-align: center;
 }
 #navbar{
+    position: sticky;
     margin-right: 10px;
 }
