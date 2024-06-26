@@ -21,5 +21,7 @@ img{
     text-align: center;
 }
 #content{
+    margin-left: 50%;
+    margin-right: 50%;
     max-width:50%;
 }
