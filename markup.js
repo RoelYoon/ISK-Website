@@ -99,11 +99,11 @@ function docDataConvert(data){
             <link rel="icon" href="https://lh3.google.com/u/0/d/1kQsVUom3mBNpqu0e34rbcsGOJExYY4NI=s2048">
         </head>
         <body>
-            <h1>${data.title}</h1>
-            <h3>${data.author}</h3>
-            <h4>${data.date}</h4>
+            <h1 id="title">${data.title}</h1>
+            <h3 id="author">${data.author}</h3>
+            <h4 id="date">${data.date}</h4>
             <br>
-            <img src=${data.img}>
+            <img id="headImg" src=${data.img}>
             <br>
             ${data.content}
         </body>
