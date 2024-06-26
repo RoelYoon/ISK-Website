@@ -17,6 +17,7 @@ img{
     max-height: 50%;
     max-width: 80%;
 }
-#content{
+#title,#author,#date{
     text-align: center;
 }
+
