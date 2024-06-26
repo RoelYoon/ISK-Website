@@ -95,7 +95,7 @@ function docDataConvert(data){
     <html>
         <head>
             <title>ISK Website</title>
-            <link rel="stylesheet" href="/articleStyle.css"/>
+            <link rel="stylesheet" href="/styles.css"/>
             <link rel="icon" href="https://lh3.google.com/u/0/d/1kQsVUom3mBNpqu0e34rbcsGOJExYY4NI=s2048">
         </head>
         <body>
@@ -104,6 +104,28 @@ function docDataConvert(data){
             <h4 id="date">${data.date}</h4>
             <img id="headImg" src=${data.img}>
             ${data.content}
+            <div id="sidebar"></div>
+            <nav id="navbar">
+                <ul id="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/authors.html">Authors</a></li>
+                    <li class="has-submenu">
+                        <a>Categories</a>
+                        <ul id="category-menu">
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Culture</a></li>
+                            <li><a href="#">Entertainment</a></li>
+                            <li><a href="#">Environment</a></li>
+                            <li><a href="#">KIS</a></li>
+                            <li><a href="#">Politics</a></li>
+                            <li><a href="#">Science</a></li>
+                            <li><a href="#">Sports</a></li>
+                            <li><a href="#">Technology</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about.html">About Us</a></li>
+                </ul>
+            </nav>
         </body>
     </html>
     `;
