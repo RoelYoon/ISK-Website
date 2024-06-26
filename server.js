@@ -35,7 +35,7 @@ app.get('/article', async (req, res) => {
 app.get('/articleHTML', async (req, res) => {
     try {
         const article = (await db.query(`SELECT * FROM article WHERE id=${req.query.id}`)).rows[0];
-        res.send(article.content);
+        res.send(markUp.docDataConvert(article));
     } catch (err) {
         console.error(err);
         res.status(500).send('Internal Server Error');
