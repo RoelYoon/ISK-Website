@@ -33,11 +33,8 @@ let monthMap = {
 httpGetAsync(`${address}article`,(res)=>{
     var js = JSON.parse(res);
     js.sort(function(a,b){
-        var monthA = monthMap[a.date.substring(0,3)];
-        var dayA = parseInt(a.date.match(/ (.*),/)[1]);
         var yearA = parseInt(a.date.substring(a.date.length-4));
         var yearB = parseInt(b.date.substring(b.date.length-4));
-        console.log(`${monthA}/${dayA}/${yearA}`)
         if(yearA==yearB){
             var monthA = monthMap[a.date.substring(0,3)];
             var monthB = monthMap[b.date.substring(0,3)];
