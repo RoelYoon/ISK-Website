@@ -66,18 +66,26 @@ async function authorize() {
 }
 
 async function docGET(auth, id, cb) {
-    const docs = google.docs({version: 'v1', auth});
-    const res = await docs.documents.get({
-        documentId: id,
-    });
-    cb(res);
+    try{
+        const docs = google.docs({version: 'v1', auth});
+        const res = await docs.documents.get({
+            documentId: id,
+        });
+        cb(res);
+    }catch(e){
+        console.log("Doc GET failed");
+    }
 }
 
 async function driveGET(auth, query, cb){
-    const drive = google.drive({version:'v3',auth});
-    const params = {q:query};
-    const res = await drive.files.list(params);
-    cb(res);
+    try{
+        const drive = google.drive({version:'v3',auth});
+        const params = {q:query};
+        const res = await drive.files.list(params);
+        cb(res);
+    }catch(e){
+        console.log("Drive GET failed");
+    }
 }
 
 async function drivePATCH(auth, id, patch){
