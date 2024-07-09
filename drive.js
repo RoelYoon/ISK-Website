@@ -85,6 +85,7 @@ async function driveGET(auth, query, cb){
         cb(res);
     }catch(e){
         console.log("Drive GET failed");
+        console.log(e);
     }
 }
 
