@@ -76,9 +76,9 @@ ul{
     opacity: 1;
     pointer-events:all;
 }
-#category-menu:hover{
-    opacity:1;
-    pointer-events:all;;
+#categoryElement:hover{
+    width: 150px;
+    height: 200px;
 }
 .cards{
     margin: 0 110px auto 0;
