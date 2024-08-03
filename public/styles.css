@@ -73,7 +73,6 @@ ul{
     transition: background .2s ease;
 }
 #categoryElement:hover #category-menu{
-    top:100%;
     opacity: 1;
     pointer-events:all;
 }
