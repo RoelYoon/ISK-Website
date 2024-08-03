@@ -76,7 +76,10 @@ ul{
     opacity: 1;
     pointer-events:all;
 }
-
+#hoverBox{
+    width: 400px;
+    height:500px;
+}
 .cards{
     margin: 0 110px auto 0;
     display: grid;
