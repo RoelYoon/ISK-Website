@@ -60,7 +60,8 @@ ul{
     pointer-events: none;
     position: absolute;
     left:0;
-    background-color: red;
+    margin-right: 110px;
+    background-color: rgb(32, 134, 236);
     border-radius: 1rem;
     padding: 1rem;
     transition: all .3s ease;
