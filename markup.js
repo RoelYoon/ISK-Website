@@ -110,7 +110,7 @@ function docDataConvert(data){
                 <ul id="menu">
                     <li><a href="/">Home</a></li>
                     <li><a href="/authors.html">Authors</a></li>
-                    <li class="has-submenu">
+                    <li class="has-submenu" id="categoryElement">
                         <a>Categories</a>
                         <ul id="category-menu">
                             <li><a href="/category/'business'">Business</a></li>
@@ -157,7 +157,7 @@ function categoryPage(articles){
                 <ul id="menu">
                     <li><a href="/">Home</a></li>
                     <li><a href="/authors.html">Authors</a></li>
-                    <li class="has-submenu">
+                    <li class="has-submenu" id="categoryElement">
                         <a>Categories</a>
                         <ul id="category-menu">
                             <li><a href="/category/'business'">Business</a></li>
