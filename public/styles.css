@@ -60,7 +60,6 @@ ul{
 }
 .cards{
     margin: 0 110px auto 0;
-    max-width: 1000px;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(225px,1fr));
     gap: 20px;
