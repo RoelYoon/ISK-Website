@@ -81,14 +81,14 @@ httpGetAsync(`${address}article`,(res)=>{
         }
     })
     //latest
-    for(var i = 0; i < Math.min(js.length,10); i++){
+    for(var i = 0; i < Math.min(js.length,6); i++){
         displayArticle(document.querySelector("#latest"),js[i]);
     }
     //popular
     js.sort(function(a,b){
         return a.views > b.views ? -1 : 1;
     })
-    for(var i = 0; i < Math.min(js.length,10); i++){
+    for(var i = 0; i < Math.min(js.length,6); i++){
         displayArticle(document.querySelector("#popular"),js[i]);
     }
     //random
