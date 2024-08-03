@@ -113,15 +113,15 @@ function docDataConvert(data){
                     <li class="has-submenu">
                         <a>Categories</a>
                         <ul id="category-menu">
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">Culture</a></li>
-                            <li><a href="#">Entertainment</a></li>
-                            <li><a href="#">Environment</a></li>
-                            <li><a href="#">KIS</a></li>
-                            <li><a href="#">Politics</a></li>
-                            <li><a href="#">Science</a></li>
-                            <li><a href="#">Sports</a></li>
-                            <li><a href="#">Technology</a></li>
+                            <li><a href="/category/'business'">Business</a></li>
+                            <li><a href="/category/'culture'">Culture</a></li>
+                            <li><a href="/category/'entertainment'">Entertainment</a></li>
+                            <li><a href="/category/'environment'">Environment</a></li>
+                            <li><a href="/category/'kis'">KIS</a></li>
+                            <li><a href="/category/'politics'">Politics</a></li>
+                            <li><a href="/category/'science'">Science</a></li>
+                            <li><a href="/category/'sports'">Sports</a></li>
+                            <li><a href="/category/'technology'">Technology</a></li>
                         </ul>
                     </li>
                     <li><a href="/about.html">About Us</a></li>
@@ -160,15 +160,15 @@ function categoryPage(articles){
                     <li class="has-submenu">
                         <a>Categories</a>
                         <ul id="category-menu">
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">Culture</a></li>
-                            <li><a href="#">Entertainment</a></li>
-                            <li><a href="#">Environment</a></li>
-                            <li><a href="#">KIS</a></li>
-                            <li><a href="#">Politics</a></li>
-                            <li><a href="#">Science</a></li>
-                            <li><a href="#">Sports</a></li>
-                            <li><a href="#">Technology</a></li>
+                            <li><a href="/category/'business'">Business</a></li>
+                            <li><a href="/category/'culture'">Culture</a></li>
+                            <li><a href="/category/'entertainment'">Entertainment</a></li>
+                            <li><a href="/category/'environment'">Environment</a></li>
+                            <li><a href="/category/'kis'">KIS</a></li>
+                            <li><a href="/category/'politics'">Politics</a></li>
+                            <li><a href="/category/'science'">Science</a></li>
+                            <li><a href="/category/'sports'">Sports</a></li>
+                            <li><a href="/category/'technology'">Technology</a></li>
                         </ul>
                     </li>
                     <li><a href="/about.html">About Us</a></li>
