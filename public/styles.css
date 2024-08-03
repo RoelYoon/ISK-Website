@@ -59,13 +59,12 @@ ul{
     display:none;
 }
 .cards{
-    margin: 0 auto;
+    margin: 0 auto auto 110;
     max-width: 1000px;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(225px,1fr));
     gap: 20px;
     font-family: roboto_serif;
-    margin-left: 10px;
 }
 .card{
     box-shadow: 0 0 3px rgba(0,0,0,0.1);
