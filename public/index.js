@@ -53,4 +53,5 @@ httpGetAsync(`${address}article`,(res)=>{
         displayArticle(js[i]);
         document.body.appendChild(document.createElement("br"));
     }
+    console.log(js)
 });
