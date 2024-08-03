@@ -92,7 +92,5 @@ httpGetAsync(`${address}article`,(res)=>{
         displayArticle(document.querySelector("#popular"),js[i]);
     }
     //random
-    for(var i = 0; i < Math.min(js.length,10); i++){
-        displayArticle(document.querySelector("#random"),js[Math.floor(Math.random() * js.length)]);
-    }
+    displayArticle(document.querySelector("#random"),js[Math.floor(Math.random() * js.length)]);
 });
