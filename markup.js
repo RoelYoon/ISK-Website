@@ -1,3 +1,4 @@
+require('dotenv').config()
 function convertContent(content){
     var result = "";
     var p = 0;
@@ -132,8 +133,15 @@ function docDataConvert(data){
     return html;
 }
 function categoryPage(articles){
+    var articleCards = "";
     for(var i = 0; i < articles.length; i++){
-        console.log(articles[i].title)
+        articleCards+=`
+        <div class="card">
+            <img class="cardImage" src=${articles[i].img}>
+            <div class="cardTitle">
+                <a href=${process.env.ADDRESS}articleHTML?id=${article.id}
+            </div> 
+        </div>`
     }
     var html = `
     <!DOCTYPE html>
@@ -144,6 +152,9 @@ function categoryPage(articles){
             <link rel="icon" href="https://lh3.google.com/u/0/d/1kQsVUom3mBNpqu0e34rbcsGOJExYY4NI=s2048">
         </head>
         <body>
+            <div class="cards" id="articles">
+                ${articleCards}
+            </div>
             <div id="sidebar"></div>
             <nav id="navbar">
                 <ul id="menu">
