@@ -60,6 +60,7 @@ ul{
     pointer-events: none;
     position: absolute;
     right:100px;
+    bottom:50px;
     background-color: rgb(32, 134, 236);
     border-radius: 1rem;
     padding: 1rem;
