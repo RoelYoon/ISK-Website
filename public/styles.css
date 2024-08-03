@@ -59,7 +59,7 @@ ul{
     display:none;
 }
 .cards{
-    margin: 0 auto auto 110px;
+    margin: 110px auto auto 0;
     max-width: 1000px;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(225px,1fr));
