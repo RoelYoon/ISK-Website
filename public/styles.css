@@ -59,7 +59,7 @@ ul{
     opacity: 0;
     pointer-events: none;
     position: absolute;
-    right:100px;
+    right:80px;
     bottom:50px;
     background-color: rgb(32, 134, 236);
     border-radius: 1rem;
