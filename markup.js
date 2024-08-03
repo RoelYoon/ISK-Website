@@ -139,7 +139,7 @@ function categoryPage(articles){
         <div class="card">
             <img class="cardImage" src=${articles[i].img}>
             <div class="cardTitle">
-                <a href=${process.env.ADDRESS}articleHTML?id=${articles[i].id}>
+                <a href=${process.env.ADDRESS}articleHTML?id=${articles[i].id}>${articles[i].title}</a>
             </div>
         </div>`;
     }
