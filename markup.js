@@ -141,7 +141,7 @@ function categoryPage(articles){
             <div class="cardTitle">
                 <a href=${process.env.ADDRESS}articleHTML?id=${articles[i].id}
             </div> 
-        </div>`
+        </div> </div>`
     }
     var html = `
     <!DOCTYPE html>
