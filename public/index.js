@@ -1,12 +1,4 @@
 var address=window.location.href;
-function displayArticle(article){
-    var a = document.createElement('a');            
-    var link = document.createTextNode(article.title);
-    a.appendChild(link); 
-    a.title = article.title; 
-    a.href = `${address}articleHTML?id=${article.id}`;
-    document.body.appendChild(a); 
-}
 function httpGetAsync(theUrl, callback){
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
@@ -30,6 +22,45 @@ let monthMap = {
     "nov" : 11,
     "dec" : 12
 };
+/*
+function displayArticle(article){
+    var a = document.createElement('a');            
+    var link = document.createTextNode(article.title);
+    a.appendChild(link); 
+    a.title = article.title; 
+    a.href = `${address}articleHTML?id=${article.id}`;
+    document.body.appendChild(a); 
+}*/
+function displayArticle(sub, article){
+    var card = document.createElement('div');
+    card.classList.add("card");
+
+    var cardImage = document.createElement("img");
+    cardImage.classList.add("cardImage");
+    cardImage.src = article.img;
+    card.appendChild(cardImage);
+    var cardTitle = document.createElement("div");
+    cardTitle.classList.add("cardTitle");
+
+    var a = document.createElement('a');            
+    var link = document.createTextNode(article.title);
+    a.appendChild(link); 
+    a.title = article.title; 
+    a.href = `${address}articleHTML?id=${article.id}`;
+
+    cardTitle.appendChild(a);
+    card.appendChild(cardTitle);
+    sub.appendChild(card);
+}
+/*
+<div class="cards" id="latest">
+<div class="card" id="l1">
+    <img class="cardImage" id="lp1">
+    <div class="cardTitle" id="lt1">
+    </div>
+</div>
+</div>
+*/
 httpGetAsync(`${address}article`,(res)=>{
     var js = JSON.parse(res);
     js.sort(function(a,b){
@@ -50,7 +81,7 @@ httpGetAsync(`${address}article`,(res)=>{
         }
     })
     for(var i = 0; i < js.length; i++){
-        displayArticle(js[i]);
+        displayArticle(document.querySelector("#latest"),js[i]);
         document.body.appendChild(document.createElement("br"));
     }
     console.log(js)
