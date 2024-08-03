@@ -93,6 +93,6 @@ httpGetAsync(`${address}article`,(res)=>{
     }
     //random
     for(var i = 0; i < Math.min(js.length,10); i++){
-        displayArticle(document.querySelector("#random"),js[Math.floor(Math.random() * js.length-1)-1]);
+        displayArticle(document.querySelector("#random"),js[Math.floor(Math.random() * js.length)]);
     }
 });
