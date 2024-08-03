@@ -79,6 +79,7 @@ ul{
 #hoverBox{
     width: 400px;
     height:500px;
+    position:absolute;
 }
 .cards{
     margin: 0 110px auto 0;
