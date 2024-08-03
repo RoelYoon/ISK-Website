@@ -131,7 +131,46 @@ function docDataConvert(data){
     `;
     return html;
 }
+function categoryPage(articles){
+    console.log(articles);
+    var html = `
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>ISK Website</title>
+            <link rel="stylesheet" href="/styles.css"/>
+            <link rel="icon" href="https://lh3.google.com/u/0/d/1kQsVUom3mBNpqu0e34rbcsGOJExYY4NI=s2048">
+        </head>
+        <body>
+            <div id="sidebar"></div>
+            <nav id="navbar">
+                <ul id="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/authors.html">Authors</a></li>
+                    <li class="has-submenu">
+                        <a>Categories</a>
+                        <ul id="category-menu">
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Culture</a></li>
+                            <li><a href="#">Entertainment</a></li>
+                            <li><a href="#">Environment</a></li>
+                            <li><a href="#">KIS</a></li>
+                            <li><a href="#">Politics</a></li>
+                            <li><a href="#">Science</a></li>
+                            <li><a href="#">Sports</a></li>
+                            <li><a href="#">Technology</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </body>
+    </html>
+    `;
+    return html;
+}
 module.exports = {
     convert: (article) => convert(article),
-    docDataConvert: (data) => docDataConvert(data)
+    docDataConvert: (data) => docDataConvert(data),
+    categoryPage: (articles) => categoryPage(articles)
 };
