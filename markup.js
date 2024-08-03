@@ -132,7 +132,9 @@ function docDataConvert(data){
     return html;
 }
 function categoryPage(articles){
-    console.log(articles);
+    for(var i = 0; i < articles.length; i++){
+        console.log(articles[i].title)
+    }
     var html = `
     <!DOCTYPE html>
     <html>
