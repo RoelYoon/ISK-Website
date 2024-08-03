@@ -59,8 +59,8 @@ ul{
     opacity: 0;
     pointer-events: none;
     position: absolute;
-    right:90px;
-    bottom:50px;
+    right:100px;
+    bottom:60px;
     background-color: rgb(32, 134, 236);
     border-radius: 1rem;
     padding: 1rem;
