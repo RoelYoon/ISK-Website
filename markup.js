@@ -152,9 +152,6 @@ function categoryPage(articles){
             <link rel="icon" href="https://lh3.google.com/u/0/d/1kQsVUom3mBNpqu0e34rbcsGOJExYY4NI=s2048">
         </head>
         <body>
-            <div class="cards" id="articles">
-                ${articleCards}
-            </div>
             <div id="sidebar"></div>
             <nav id="navbar">
                 <ul id="menu">
@@ -177,6 +174,9 @@ function categoryPage(articles){
                     <li><a href="/about.html">About Us</a></li>
                 </ul>
             </nav>
+            <div class="cards" id="articles">
+                ${articleCards}
+            </div>
         </body>
     </html>
     `;
