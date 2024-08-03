@@ -80,9 +80,15 @@ httpGetAsync(`${address}article`,(res)=>{
             return yearA > yearB ? -1 : 1;
         }
     })
-    for(var i = 0; i < js.length; i++){
+    //latest
+    for(var i = 0; i < Math.min(js.length,10); i++){
         displayArticle(document.querySelector("#latest"),js[i]);
-        document.body.appendChild(document.createElement("br"));
     }
-    console.log(js)
+    //popular
+    js.sort(function(a,b){
+        return a.views > b.views ? -1 : 1;
+    })
+    for(var i = 0; i < Math.min(js.length,10); i++){
+        displayArticle(document.querySelector("#popular"),js[i]);
+    }
 });
