@@ -49,7 +49,7 @@ function displayArticle(sub, article){
     a.href = `${address}articleHTML?id=${article.id}`;
 
     var cardInfo = document.createElement("div");
-    cardInfo.classList.add("cardTitle");
+    cardInfo.classList.add("cardInfo");
     var cardCategory = document.createElement("div");
     cardCategory.classList.add("cardCategory");
     var cardCategoryText = document.createElement("p");
