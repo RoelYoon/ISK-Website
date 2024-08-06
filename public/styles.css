@@ -106,8 +106,11 @@ ul{
     text-align: center;
 }
 .cardInfo{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
     background-color:#62757F;
-    bottom: 0;
+    font-size: 0.8em;
 }
 .horizontal {
     border-bottom: 5px solid black;
