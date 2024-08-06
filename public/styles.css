@@ -13,7 +13,7 @@ img{
 }
 
 body{
-    background-color: #cfcccc;
+    background-color: #7AA8BD;
 }
 @font-face {font-family: roboto_serif; src: url('/fonts/roboto_serif.ttf');} 
 @font-face {font-family: old_london; src: url('/fonts/old_london.ttf');} 
@@ -49,7 +49,7 @@ ul{
     display: flex;
     width: 100px;
     height: 100vh;
-    background-color: #5A6A76;
+    background-color: #BDCFC9;
     right: 0;
     top: 0;
     position: fixed;
@@ -61,7 +61,7 @@ ul{
     position: absolute;
     right:100px;
     bottom:70px;
-    background-color: rgb(32, 134, 236);
+    background-color: #5A6A76;
     border-radius: 1rem;
     padding: 1rem;
     transition: all .3s ease;
