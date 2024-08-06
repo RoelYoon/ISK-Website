@@ -92,6 +92,7 @@ ul{
 .card{
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
     background-color: rgba(189, 207, 201, 0.4);
+    position: relative;
 }
 .cardImage{
     object-fit: cover;
@@ -120,7 +121,9 @@ ul{
     font-size: 0.8em;
     border-bottom: 2px solid #536168;
     align-items: center;
-    vertical-align:bottom;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 .cardInfo img{
     float: left;
