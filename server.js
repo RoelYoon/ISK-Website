@@ -35,6 +35,7 @@ app.get('/article', async (req, res) => {
 app.get('/articleHTML', async (req, res) => {
     try {
         const article = (await db.query(`SELECT * FROM article WHERE id=${req.query.id}`)).rows[0];
+        await db.query(`UPDATE views SET views = views + 1 WHERE id=${req.query.id}`);
         res.send(markUp.docDataConvert(article));
     } catch (err) {
         console.error(err);
