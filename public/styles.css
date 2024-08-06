@@ -116,6 +116,7 @@ ul{
 }
 .cardInfo img{
     float: left;
+    margin-right: 10px;
 }
 .cardViews{
     display: flex;
