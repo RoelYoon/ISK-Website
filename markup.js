@@ -126,7 +126,7 @@ function categoryPage(articles){
                 <div class="cardCategory">
                     <p>${article.category}</p>
                 </div>
-                <div class="cardCategory">
+                <div class="cardViews">
                     <img serc="icons/eye.svg">
                     <p>${article.views}</p>
                 </div>
