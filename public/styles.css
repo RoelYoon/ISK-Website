@@ -140,11 +140,11 @@ ul{
     color: #303030;
     font-size: 1.2em;
 }
-.horizontal_main{
+.horizontal-main{
     border-bottom: 5px solid black;
     width: .9 * (100vw - 110px);
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 110px;
 }
 .horizontal{
     border-bottom: 5px solid black;
