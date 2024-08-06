@@ -53,15 +53,18 @@ function displayArticle(sub, article){
     var cardCategory = document.createElement("div");
     cardCategory.classList.add("cardCategory");
     var cardCategoryText = document.createElement("p");
-    cardCategoryText.textContent = article.category;
+    cardCategoryText.textContent = article.category.charAt(0).toUpperCase() + article.category.slice(1);;
     cardCategory.appendChild(cardCategoryText);
     cardInfo.appendChild(cardCategory);
 
     var cardViews = document.createElement("div");
     cardViews.classList.add("cardViews");
+    var viewIcon = document.createElement("img");
+    viewIcon.src="icons/eye.svg";
     var cardViewsText = document.createElement("p");
     cardViewsText.textContent = article.views;
     cardViews.appendChild(cardViewsText);
+    cardInfo.appendChild(viewIcon);
     cardInfo.appendChild(cardViews);
 
     cardTitle.appendChild(a);
