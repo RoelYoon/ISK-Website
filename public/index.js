@@ -64,7 +64,7 @@ function displayArticle(sub, article){
     var cardViewsText = document.createElement("p");
     cardViewsText.textContent = article.views;
     cardViews.appendChild(cardViewsText);
-    cardInfo.appendChild(viewIcon);
+    cardViews.appendChild(viewIcon);
     cardInfo.appendChild(cardViews);
 
     cardTitle.appendChild(a);
