@@ -112,6 +112,7 @@ ul{
     background-color:#a3b0b6;
     font-size: 0.8em;
     border-bottom: 2px solid #536168;
+    align-items: center;
 }
 .cardInfo img{
     float: left;
