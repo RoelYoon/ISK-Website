@@ -63,7 +63,7 @@ ul{
     pointer-events: none;
     position: absolute;
     right:100px;
-    bottom: -100px;
+    bottom: -10vh;
     background-color: #95a2a9;
     border-radius: 1rem;
     padding: 1rem;
