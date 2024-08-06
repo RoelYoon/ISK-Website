@@ -113,6 +113,7 @@ function docDataConvert(data){
                     <li class="has-submenu" id="categoryElement">
                         <a>Categories</a>
                         <ul id="category-menu">
+                            <div id="hoverBox"></div>
                             <li><a href="/category/'business'">Business</a></li>
                             <li><a href="/category/'culture'">Culture</a></li>
                             <li><a href="/category/'entertainment'">Entertainment</a></li>
