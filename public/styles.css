@@ -98,7 +98,7 @@ ul{
     width: 100%;
     display: block;
     margin: auto;
-    top: 10px;
+    margin-top: 10px;
     border: 1px solid gray;
     border-radius: 5px;
 }
