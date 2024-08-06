@@ -106,8 +106,8 @@ ul{
     text-align: center;
 }
 .cardInfo{
-    margin-bottom: 0;
     background-color:#62757F;
+    bottom: 0;
 }
 .horizontal {
     border-bottom: 5px solid black;
