@@ -115,7 +115,8 @@ ul{
     align-items: center;
 }
 .cardInfo img{
-    position: absolute;
+    float: left;
+    width: 50%;
 }
 .cardInfo p {
     color: #303030;
