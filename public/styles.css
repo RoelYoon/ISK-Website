@@ -123,6 +123,7 @@ ul{
 }
 .cardInfo p {
     color: #303030;
+    font-size: 1.2em;
 }
 .horizontal {
     border-bottom: 5px solid black;
