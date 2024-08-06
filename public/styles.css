@@ -55,7 +55,7 @@ ul{
     top: 0;
     position: fixed;
 }
-#has-submenu{
+.has-submenu{
     position:relative;
 }
 #category-menu{
