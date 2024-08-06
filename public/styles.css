@@ -119,7 +119,6 @@ ul{
 }
 .cardInfo p {
     color: #303030;
-    overflow:auto;
 }
 .horizontal {
     border-bottom: 5px solid black;
