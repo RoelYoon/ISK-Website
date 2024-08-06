@@ -53,7 +53,7 @@ function displayArticle(sub, article){
     var cardCategory = document.createElement("div");
     cardCategory.classList.add("cardCategory");
     var cardCategoryText = document.createElement("p");
-    cardCategoryText.textContent = article.category.charAt(0).toUpperCase() + article.category.slice(1);;
+    cardCategoryText.textContent = article.category.charAt(0).toUpperCase() + article.category.slice(1);
     cardCategory.appendChild(cardCategoryText);
     cardInfo.appendChild(cardCategory);
 
