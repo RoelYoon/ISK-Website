@@ -114,7 +114,8 @@ ul{
     border-bottom: 2px solid #536168;
 }
 .cardInfo img{
-    display: flex;
+    float: left;
+    margin-right: 10px;
 }
 .cardInfo p {
     color: #303030;
