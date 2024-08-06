@@ -115,8 +115,7 @@ ul{
     align-items: center;
 }
 .cardInfo img{
-    float: right;
-    
+    float: left;
 }
 .cardViews{
     display: flex;
