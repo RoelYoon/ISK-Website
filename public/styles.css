@@ -142,7 +142,7 @@ ul{
 }
 .horizontal {
     border-bottom: 5px solid black;
-    width: 90%;
+    width: .9 * (vw - 110px);
     margin-left: auto;
     margin-right: auto;
 }
