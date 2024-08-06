@@ -104,3 +104,8 @@ ul{
     padding: 15px;
     text-align: center;
 }
+.horizontalLine {
+    border-bottom: 5px solid black;
+    margin-top: 5px;
+    width: 90%;
+}
