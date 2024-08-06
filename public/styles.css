@@ -63,6 +63,8 @@ ul{
     pointer-events: none;
     position: absolute;
     right:100px;
+    top: auto;
+    bottom: auto;
     background-color: #95a2a9;
     border-radius: 1rem;
     padding: 1rem;
