@@ -91,21 +91,34 @@ app.all('*',(req,res)=>{
 });
 app.listen(process.env.PORT, process.env.INTERNAL_IP, ()=>{console.log(`Listening at ${process.env.ADDRESS}`)});
 
+function FormatError(msg = "") { 
+    this.msg = msg; 
+    this.name = "FormatError"; 
+} 
+FormatError.prototype = Error.prototype;
 function uploadArticles() {
     setTimeout(() => {
         drive.driveGET(`name contains '[READY]'`,(res)=>{
             for(var i = 0; i < res.data.files.length; i++){
                 var file = res.data.files[i];
-                drive.drivePATCH(file.id,{'name': file.name.replace("[READY]","[PUBLISHED]")});
                 drive.docGET(file.id,async(res)=>{
                     try{
                         let data = drive.extract(res);
+                        if(!(/^([a-z0-9]{5,})$/.test(data.date.trim()))){
+                            //throw new FormatError("Article Formatting Error");
+                        }
                         await db.query('INSERT INTO article (title, author, date, img, category, content, views) VALUES ($1,$2,$3,$4,$5,$6,0)',[data.title,data.author.trim(),data.date.trim(),data.img,data.category.toLowerCase().trim(),data.html]);
                     }catch (err){
+                        if(err instanceof FormatError){
+                            drive.drivePATCH(file.id,{'name': file.name.replace("[READY]","[FORMAT ERROR]")});
+                        }else{
+                            drive.drivePATCH(file.id,{'name': file.name.replace("[READY]","[SERVER ERROR]")});
+                        }
                         console.error(err);
                     }
                 })
             }
+            drive.drivePATCH(file.id,{'name': file.name.replace("[READY]","[PUBLISHED]")});
         })
         uploadArticles();
     }, 5000)
