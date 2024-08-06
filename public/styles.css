@@ -123,7 +123,8 @@ ul{
     align-items: center;
     position: absolute;
     bottom: 0px;
-    width: 100%;
+    left: 0;
+    right: 0;
 }
 .cardInfo img{
     float: left;
