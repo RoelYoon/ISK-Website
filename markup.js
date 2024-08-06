@@ -68,22 +68,12 @@ function convertContent(content){
     }
     return result;
 }
-function docDataConvert(data){
-    var html = `
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>ISK Website</title>
-            <link rel="stylesheet" href="/styles.css"/>
-            <link rel="icon" href="https://lh3.google.com/u/0/d/1kQsVUom3mBNpqu0e34rbcsGOJExYY4NI=s2048">
-        </head>
-        <body>
-            <h1 id="title">${data.title}</h1>
-            <h3 id="author">${data.author}</h3>
-            <h4 id="date">${data.date}</h4>
-            <img id="headImg" src=${data.img}>
-            ${data.content}
-            <div id="sidebar"></div>
+let header = `<head>
+<title>ISK Website</title>
+<link rel="stylesheet" href="/styles.css"/>
+<link rel="icon" href="https://lh3.google.com/u/0/d/1kQsVUom3mBNpqu0e34rbcsGOJExYY4NI=s2048">
+</head>`
+let sidebar = `<div id="sidebar"></div>
             <nav id="navbar">
                 <ul id="menu">
                     <li><a href="/">Home</a></li>
@@ -105,7 +95,19 @@ function docDataConvert(data){
                     </li>
                     <li><a href="/about.html">About Us</a></li>
                 </ul>
-            </nav>
+            </nav>`
+function docDataConvert(data){
+    var html = `
+    <!DOCTYPE html>
+    <html>
+        ${header}
+        <body>
+            <h1 id="title">${data.title}</h1>
+            <h3 id="author">${data.author}</h3>
+            <h4 id="date">${data.date}</h4>
+            <img id="headImg" src=${data.img}>
+            ${data.content}
+            ${sidebar}
         </body>
     </html>
     `;
@@ -125,35 +127,9 @@ function categoryPage(articles){
     var html = `
     <!DOCTYPE html>
     <html>
-        <head>
-            <title>ISK Website</title>
-            <link rel="stylesheet" href="/styles.css"/>
-            <link rel="icon" href="https://lh3.google.com/u/0/d/1kQsVUom3mBNpqu0e34rbcsGOJExYY4NI=s2048">
-        </head>
+        ${header}
         <body>
-            <div id="sidebar"></div>
-            <nav id="navbar">
-                <ul id="menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/authors.html">Authors</a></li>
-                    <li class="has-submenu" id="categoryElement">
-                        <a>Categories</a>
-                        <ul id="category-menu">
-                            <div id="hoverBox"></div>
-                            <li><a href="/category/'business'">Business</a></li>
-                            <li><a href="/category/'culture'">Culture</a></li>
-                            <li><a href="/category/'entertainment'">Entertainment</a></li>
-                            <li><a href="/category/'environment'">Environment</a></li>
-                            <li><a href="/category/'kis'">KIS</a></li>
-                            <li><a href="/category/'politics'">Politics</a></li>
-                            <li><a href="/category/'science'">Science</a></li>
-                            <li><a href="/category/'sports'">Sports</a></li>
-                            <li><a href="/category/'technology'">Technology</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/about.html">About Us</a></li>
-                </ul>
-            </nav>
+            ${sidebar}
             <div class="cards" id="articles">
                 ${articleCards}
             </div>
