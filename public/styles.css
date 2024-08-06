@@ -111,6 +111,7 @@ ul{
     justify-content: space-between;
     background-color:#62757F;
     font-size: 0.8em;
+    border-bottom: 2px solid #536168;
 }
 .horizontal {
     border-bottom: 5px solid black;
