@@ -113,6 +113,10 @@ ul{
     font-size: 0.8em;
     border-bottom: 2px solid #536168;
 }
+.cardInfo p {
+    font-size: 1.5em;
+
+}
 .horizontal {
     border-bottom: 5px solid black;
     margin-top: 5px;
