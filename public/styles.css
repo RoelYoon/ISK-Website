@@ -65,7 +65,7 @@ ul{
     border-radius: 1rem;
     padding: 1rem;
     transition: all .3s ease;
-    z-index: 1;
+    z-index: -1;
 }
 #category-menu li{
     padding: 1rem;
