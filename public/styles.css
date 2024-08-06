@@ -57,13 +57,13 @@ ul{
 }
 .has-submenu{
     position:relative;
+    align-items: center;
 }
 #category-menu{
     opacity: 0;
     pointer-events: none;
     position: absolute;
     right:100px;
-    vertical-align: center;
     background-color: #95a2a9;
     border-radius: 1rem;
     padding: 1rem;
