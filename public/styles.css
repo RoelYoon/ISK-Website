@@ -118,6 +118,9 @@ ul{
     float: right;
     
 }
+.cardViews{
+    display: flex;
+}
 .cardInfo p {
     color: #303030;
 }
