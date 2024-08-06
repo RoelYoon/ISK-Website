@@ -48,15 +48,34 @@ function displayArticle(sub, article){
     a.title = article.title; 
     a.href = `${address}articleHTML?id=${article.id}`;
 
+    var cardInfo = document.createElement("div");
+    cardInfo.classList.add("cardTitle");
+    var cardCategory = document.createElement("div");
+    cardCategory.classList.add("cardCategory");
+    var cardCategoryText = document.createElement("p");
+    cardCategoryText.textContent = article.category;
+    cardCategory.appendChild(cardCategoryText);
+    cardInfo.appendChild(cardCategory);
+
+    var cardViews = document.createElement("div");
+    cardViews.classList.add("cardViews");
+    var cardViewsText = document.createElement("p");
+    cardViewsText.textContent = article.views;
+    cardInfo.appendChild(cardViews);
+
     cardTitle.appendChild(a);
     card.appendChild(cardTitle);
+    card.appendChild(cardInfo);
     sub.appendChild(card);
 }
 /*
 <div class="cards" id="latest">
 <div class="card" id="l1">
-    <img class="cardImage" id="lp1">
-    <div class="cardTitle" id="lt1">
+    <img class="cardImage">
+    <div class="cardTitle"></div>
+    <div class="cardInfo">
+        <div class="cardCategory"></div>
+        <div class="cardViews"></div>
     </div>
 </div>
 </div>
