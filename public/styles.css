@@ -44,6 +44,7 @@ ul{
     flex-direction: column;
     justify-content: space-evenly;
     height: 100vh;
+    z-index: 9999;
 }
 #sidebar{
     display: flex;
