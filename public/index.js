@@ -63,8 +63,8 @@ function displayArticle(sub, article){
     viewIcon.src="icons/eye.svg";
     var cardViewsText = document.createElement("p");
     cardViewsText.textContent = article.views;
-    cardViews.appendChild(viewIcon);
     cardViews.appendChild(cardViewsText);
+    cardViews.appendChild(viewIcon);
     cardInfo.appendChild(cardViews);
 
     cardTitle.appendChild(a);
