@@ -68,28 +68,6 @@ function convertContent(content){
     }
     return result;
 }
-function convert(article){
-    var html = `
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>ISK Website</title>
-            <link rel="stylesheet" href="/styles.css"/>
-            <link rel="icon" href="https://drive.usercontent.google.com/download?id=1kQsVUom3mBNpqu0e34rbcsGOJExYY4NI">
-        </head>
-        <body>
-            <h1>${article.title}</h1>
-            <h3>${article.author}</h3>
-            <h4>${article.date}</h4>
-            <br>
-            <img src=${article.img}>
-            <br>
-            <p>${convertContent(article.content)}</p>
-        </body>
-    </html>
-    `;
-    return html;
-}
 function docDataConvert(data){
     var html = `
     <!DOCTYPE html>
