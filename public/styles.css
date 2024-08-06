@@ -147,6 +147,6 @@ ul{
     margin-right: auto;
 }
 .main{
-    margin-right: 110px;
     width: .9 * (100vw - 110px);
+    margin-right: 110px;
 }
