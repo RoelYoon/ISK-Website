@@ -55,12 +55,15 @@ ul{
     top: 0;
     position: fixed;
 }
+#has-submenu{
+    position:relative;
+}
 #category-menu{
     opacity: 0;
     pointer-events: none;
     position: absolute;
     right:100px;
-    bottom: 10vh;
+    bottom: 0;
     background-color: #95a2a9;
     border-radius: 1rem;
     padding: 1rem;
