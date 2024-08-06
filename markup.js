@@ -127,7 +127,7 @@ function categoryPage(articles){
                     <p>${articles[i].category.charAt(0).toUpperCase() + articles[i].category.slice(1)}</p>
                 </div>
                 <div class="cardViews">
-                    <img serc="icons/eye.svg">
+                    <img src="icons/eye.svg">
                     <p>${articles[i].views}</p>
                 </div>
             </div>
