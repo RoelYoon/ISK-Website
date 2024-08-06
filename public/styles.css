@@ -71,11 +71,11 @@ ul{
     border-radius: .5rem;
     cursor: pointer;
     transition: background .2s ease;
-    z-index: 9999;
 }
 #categoryElement:hover #category-menu{
     opacity: 1;
     pointer-events:all;
+    z-index: 9999;
 }
 #hoverBox{
     width: 50px;
