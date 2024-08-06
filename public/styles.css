@@ -122,7 +122,8 @@ ul{
     font-size: 0.8em;
     border-bottom: 2px solid #536168;
     align-items: center;
-    vertical-align:bottom;
+    position: absolute;
+    bottom: 0px;
 }
 .cardInfo img{
     float: left;
