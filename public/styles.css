@@ -143,6 +143,7 @@ ul{
 .horizontal {
     border-bottom: 5px solid black;
     margin-top: 5px;
+    margin-bottom: 5px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
