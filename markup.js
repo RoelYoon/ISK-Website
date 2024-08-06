@@ -77,7 +77,9 @@ let sidebar = `<div id="sidebar"></div>
             <nav id="navbar">
                 <ul id="menu">
                     <li><a href="/">Home</a></li>
+                    <div class="horizontal"></div>
                     <li><a href="/authors.html">Authors</a></li>
+                    <div class="horizontal"></div>
                     <li class="has-submenu" id="categoryElement">
                         <a>Categories</a>
                         <ul id="category-menu">
@@ -93,6 +95,7 @@ let sidebar = `<div id="sidebar"></div>
                             <li><a href="/category/'technology'">Technology</a></li>
                         </ul>
                     </li>
+                    <div class="horizontal"></div>
                     <li><a href="/about.html">About Us</a></li>
                 </ul>
             </nav>`
