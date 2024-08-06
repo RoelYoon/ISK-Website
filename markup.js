@@ -124,11 +124,11 @@ function categoryPage(articles){
             </div>
             <div class="cardInfo">
                 <div class="cardCategory">
-                    <p>${article[i].category.charAt(0).toUpperCase() + article[i].category.slice(1)}</p>
+                    <p>${articles[i].category.charAt(0).toUpperCase() + articles[i].category.slice(1)}</p>
                 </div>
                 <div class="cardViews">
                     <img serc="icons/eye.svg">
-                    <p>${article[i].views}</p>
+                    <p>${articles[i].views}</p>
                 </div>
             </div>
         </div>`;
