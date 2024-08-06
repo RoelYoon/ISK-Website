@@ -99,6 +99,7 @@ ul{
     display: block;
     margin: auto;
     border-radius: 5px;
+    border-color: gray;
 }
 .cardTitle{
     line-height: 1.5;
