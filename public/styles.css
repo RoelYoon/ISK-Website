@@ -109,6 +109,7 @@ ul{
     font-size: 0.9em;
     padding: 15px;
     text-align: center;
+    word-wrap: break-word;
 }
 .cardTitle a{
     margin-bottom: 0;
