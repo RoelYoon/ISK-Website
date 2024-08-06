@@ -65,13 +65,13 @@ ul{
     border-radius: 1rem;
     padding: 1rem;
     transition: all .3s ease;
-    z-index: 9999;
 }
 #category-menu li{
     padding: 1rem;
     border-radius: .5rem;
     cursor: pointer;
     transition: background .2s ease;
+    z-index: 9999;
 }
 #categoryElement:hover #category-menu{
     opacity: 1;
