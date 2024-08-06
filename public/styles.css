@@ -53,6 +53,7 @@ ul{
     right: 0;
     top: 0;
     position: fixed;
+    z-index: 9999;
 }
 #category-menu{
     opacity: 0;
@@ -129,7 +130,6 @@ ul{
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 0;
 }
 .cardInfo img{
     float: left;
