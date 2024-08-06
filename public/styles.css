@@ -98,6 +98,7 @@ ul{
     width: 100%;
     display: block;
     margin: auto;
+    border-radius: 1px;
 }
 .cardTitle{
     line-height: 1.5;
