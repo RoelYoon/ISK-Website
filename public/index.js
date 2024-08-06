@@ -48,8 +48,6 @@ function displayArticle(sub, article){
     a.title = article.title; 
     a.href = `${address}articleHTML?id=${article.id}`;
 
-    var cardInfoContainer = document.createElement("div");
-    cardInfoContainer.classList.add("cardInfoContainer");
     var cardInfo = document.createElement("div");
     cardInfo.classList.add("cardInfo");
     var cardCategory = document.createElement("div");
@@ -68,11 +66,10 @@ function displayArticle(sub, article){
     cardViews.appendChild(viewIcon);
     cardViews.appendChild(cardViewsText);
     cardInfo.appendChild(cardViews);
-    cardInfoContainer.appendChild(cardInfo);
 
     cardTitle.appendChild(a);
     card.appendChild(cardTitle);
-    card.appendChild(cardInfoContainer);
+    card.appendChild(cardInfo);
     sub.appendChild(card);
 }
 /*
