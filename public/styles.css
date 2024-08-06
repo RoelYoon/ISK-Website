@@ -92,7 +92,6 @@ ul{
 .card{
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
     background-color: rgba(189, 207, 201, 0.4);
-    display: flex;
 }
 .cardImage{
     object-fit: cover;
