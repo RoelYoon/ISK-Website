@@ -142,10 +142,11 @@ ul{
 }
 .horizontal {
     border-bottom: 5px solid black;
-    width: .9 * (100vw - 110px);
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 .main{
     margin-right: 110px;
+    width: .9 * (100vw - 110px)
 }
