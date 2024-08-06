@@ -122,6 +122,15 @@ function categoryPage(articles){
             <div class="cardTitle">
                 <a href=${process.env.ADDRESS}articleHTML?id=${articles[i].id}>${articles[i].title}</a>
             </div>
+            <div class="cardInfo">
+                <div class="cardCategory">
+                    <p>${article.category}</p>
+                </div>
+                <div class="cardCategory">
+                    <img serc="icons/eye.svg">
+                    <p>${article.views}</p>
+                </div>
+            </div>
         </div>`;
     }
     var html = `
