@@ -104,7 +104,6 @@ ul{
     font-size: 0.9em;
     padding: 15px;
     text-align: center;
-    margin-bottom:0;
 }
 .cardInfo{
     padding: 15px;
@@ -116,7 +115,7 @@ ul{
     align-items: center;
 }
 .cardInfo img{
-    float: left;
+    position: absolute;
 }
 .cardInfo p {
     color: #303030;
