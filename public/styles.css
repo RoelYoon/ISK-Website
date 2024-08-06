@@ -63,7 +63,9 @@ ul{
     pointer-events: none;
     position: absolute;
     right:100px;
-    top:-50%;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     background-color: #95a2a9;
     border-radius: 1rem;
     padding: 1rem;
