@@ -99,6 +99,7 @@ ul{
     background-color: rgba(189, 207, 201, 0.4);
     position: relative;
     padding-bottom: 75px;
+    opacity: 1;
 }
 .cardContent{
     position: absolute;
@@ -109,9 +110,7 @@ ul{
 .card:hover .cardImage,.cardTitle,.cardInfo{
     opacity: 0.2;
 }
-.card .cardImage,.cardTitle,.cardInfo{
-    opacity: 0.2;
-}
+
 .card:hover .cardContent{
     opacity: 1;
 }
