@@ -106,7 +106,7 @@ function extract(res){
         "date": "",
         "category":"",
         "img": "X",
-        "html": `<p id="content">`
+        "html": `<div id="content">`
     }
     var level = 0;
     var dataSet = false;
@@ -126,6 +126,7 @@ function extract(res){
                 }
                 if(!dataSet){continue;}
                 let style = elements[j].textRun.textStyle;
+                data.html+=`<p>`
                 data.html+=(style.link?`<a href=${style.link.url}>`:``) + 
                 (style.bold?`<strong>`:``) +
                 (style.italic?`<em>`:``) +
@@ -133,6 +134,7 @@ function extract(res){
                 (style.italic?`</em>`:``) +
                 (style.bold?`</strong>`:``) +
                 (style.link?`</a>`:``);
+                data.html+=`</p>`
             }
             if(elements[j].inlineObjectElement){
                 if(data.img!=="X"){
@@ -143,7 +145,7 @@ function extract(res){
             }
         }
     }
-    data.html+="</p>";
+    data.html+="</div>";
     return data;
 }
 
