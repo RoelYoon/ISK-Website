@@ -24,7 +24,7 @@ img:not(#headImg){
 p, em, strong, a{
     margin:0;
     display: inline;
-    line-height: 1.2
+    line-height: 1.5;
 }
 body{
     background-color: #7AA8BD;
