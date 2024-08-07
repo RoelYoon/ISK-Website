@@ -135,7 +135,7 @@ function extract(res){
                 elements[j].textRun.content.replace("\n",`<br>`) +
                 (style.italic?`</em>`:``) +
                 (style.bold?`</strong>`:``) +
-                (j+1 < elements.length && elements[j+1].textRun ? (elements[j+1].textRun.content=="\n" ? `</p>` : ``) : `</p>`) +
+                (j+1 < elements.length && elements[j+1].textRun ? (elements[j+1].textRun.content=="\n" ? `</p>` : `why`) : `</p>`) +
                 (style.link?`</a>`:``);
                 imgCaptionState=emptyStr && imgCaptionState;
             }
