@@ -112,8 +112,7 @@ ul{
 }
 
 .card:hover .cardContent{
-    opacity: 1;
-    transition: background .2s ease;
+    opacity: 0;
 }
 .cardImage{
     object-fit: cover;
