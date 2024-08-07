@@ -129,7 +129,7 @@ function extract(res){
                 data.html+=(style.link?`<a href=${style.link.url}>`:``) + 
                 (style.bold?`<strong>`:``) +
                 (style.italic?`<em>`:``) +
-                (elements[j].textRun.content=="\n" ? "" : elements[j].textRun.content.replace("\n","</p><p>")) +
+                (elements[j].textRun.content=="\n" ? "<br>" : elements[j].textRun.content.replace("\n","</p><p>")) +
                 (style.italic?`</em>`:``) +
                 (style.bold?`</strong>`:``) +
                 (style.link?`</a>`:``);
