@@ -112,6 +112,7 @@ ul{
     font-family: roboto_serif;
     padding-bottom: 50px;
     overflow:hidden;
+    text-overflow: ellipsis;
 }
 .card:hover > .cardImage , .card:hover > .cardTitle, .card:hover > .cardInfo{
     transition: all .3s ease;
