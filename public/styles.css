@@ -108,6 +108,8 @@ ul{
     opacity: 0;
     background-color: #9ea8b4;
     transition: all .3s ease;
+    word-break:break-all;
+    text-overflow: ellipsis;
 }
 .cardContent > p{
     word-break:break-all;
