@@ -75,6 +75,7 @@ ul{
     padding: 1rem;
     border-radius: .5rem;
     cursor: pointer;
+    overflow: scroll;
     transition: background .2s ease;
 }
 #categoryElement:hover #category-menu{
