@@ -106,7 +106,7 @@ function extract(res){
         "date": "",
         "category":"",
         "img": "X",
-        "html": `<p id="content">`
+        "html": `<div id="content"><p>`
     }
     var level = 0;
     var dataSet = false;
@@ -129,7 +129,7 @@ function extract(res){
                 data.html+=(style.link?`<a href=${style.link.url}>`:``) + 
                 (style.bold?`<strong>`:``) +
                 (style.italic?`<em>`:``) +
-                elements[j].textRun.content.replace("\n","<br>") +
+                elements[j].textRun.content.replace("\n","</p><p>") +
                 (style.italic?`</em>`:``) +
                 (style.bold?`</strong>`:``) +
                 (style.link?`</a>`:``);
@@ -143,7 +143,7 @@ function extract(res){
             }
         }
     }
-    data.html+="</p>";
+    data.html+="</div>";
     return data;
 }
 
