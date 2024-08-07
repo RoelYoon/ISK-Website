@@ -99,7 +99,6 @@ ul{
     background-color: rgba(189, 207, 201, 0.4);
     position: relative;
     padding-bottom: 75px;
-    opacity: 1;
 }
 .cardContent{
     position: absolute;
@@ -129,6 +128,7 @@ ul{
     padding: 15px;
     text-align: center;
     word-wrap: break-word;
+    opacity: 1;
 }
 .cardTitle a{
     margin-bottom: 0;
@@ -146,6 +146,7 @@ ul{
     bottom: 0;
     left: 0;
     right: 0;
+    opacity: 1;
 }
 .cardInfo img{
     float: left;
