@@ -112,7 +112,9 @@ ul{
     font-family: roboto_serif;
 }
 .cardContentContainer{
-    
+    position: absolute;
+    top: 0;
+    bottom: 0;
     overflow:hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
