@@ -110,6 +110,7 @@ ul{
     transition: all .3s ease;
     word-break:break-all;
     text-overflow: ellipsis;
+    overflow:hidden;
 }
 .cardContent > p{
     word-break:break-all;
