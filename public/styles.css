@@ -100,6 +100,9 @@ ul{
     position: relative;
     padding-bottom: 75px;
 }
+.card:hover{
+    opacity: 0.2;
+}
 .cardImage{
     object-fit: cover;
     width: 100%;
