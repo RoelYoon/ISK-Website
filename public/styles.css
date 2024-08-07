@@ -109,6 +109,9 @@ ul{
 .card:hover .cardImage,.cardTitle,.cardInfo{
     opacity: 0.2;
 }
+.card .cardImage,.cardTitle,.cardInfo{
+    opacity: 0.2;
+}
 .card:hover .cardContent{
     opacity: 1;
 }
