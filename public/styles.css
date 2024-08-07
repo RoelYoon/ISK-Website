@@ -16,7 +16,7 @@ img:not(#headImg){
     margin-left: auto;
     margin-right: auto;
 }
-img + p{
+img+p{
     text-align:center;
 }
 body{
