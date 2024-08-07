@@ -19,7 +19,7 @@ img:not(#headImg){
 p{
     margin:0;
 }
-img+p{
+img+em{
     text-align:center;
 }
 body{
