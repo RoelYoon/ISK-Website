@@ -114,7 +114,6 @@ ul{
     overflow:hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
-    height:50px;
 }
 .card:hover > .cardImage , .card:hover > .cardTitle, .card:hover > .cardInfo{
     transition: all .3s ease;

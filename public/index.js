@@ -67,7 +67,9 @@ function displayArticle(sub, article){
 
     var cardContent = document.createElement("div");
     cardContent.classList.add("cardContent");
-    cardContent.innerHTML = article.content;
+    var cardContentContainer = document.createElement("div");
+    cardContentContainer.classList.add("cardContentContainer");
+    cardContentContainer.innerHTML = article.content;
 
     var a = document.createElement('a');            
     a.href = `${address}articleHTML?id=${article.id}`;
