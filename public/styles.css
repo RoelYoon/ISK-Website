@@ -110,8 +110,7 @@ ul{
     transition: all .3s ease;
     color: black;
     font-family: roboto_serif;
-    word-break:break-all;
-    text-overflow: ellipsis;
+    padding: 15px;
     overflow:hidden;
 }
 .card:hover > .cardImage , .card:hover > .cardTitle, .card:hover > .cardInfo{
