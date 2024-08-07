@@ -99,6 +99,7 @@ ul{
     background-color: rgba(189, 207, 201, 0.4);
     position: relative;
     padding-bottom: 75px;
+    opacity: 0;
 }
 .cardContent{
     position: absolute;
@@ -107,12 +108,12 @@ ul{
     text-overflow: ellipsis;
     background-color: #e9e07f;
 }
-.card:hover{
+.card:hover > .card{
     opacity: 0.2;
 }
 
 .card:hover .cardContent{
-    opacity: 0;
+    opacity: 1;
 }
 .cardImage{
     object-fit: cover;
