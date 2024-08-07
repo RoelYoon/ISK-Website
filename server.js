@@ -116,9 +116,9 @@ function uploadArticles() {
                         }
                         console.error(err);
                     }
-                })
+                });
+                drive.drivePATCH(file.id,{'name': file.name.replace("[READY]","[PUBLISHED]")});
             }
-            drive.drivePATCH(file.id,{'name': file.name.replace("[READY]","[PUBLISHED]")});
         })
         uploadArticles();
     }, 5000)
