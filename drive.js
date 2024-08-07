@@ -106,7 +106,7 @@ function extract(res){
         "date": "",
         "category":"",
         "img": "X",
-        "html": `<div id="content"><p>`
+        "html": `<div id="content">`
     }
     var level = 0;
     var dataSet = false;
