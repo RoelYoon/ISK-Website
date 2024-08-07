@@ -116,10 +116,10 @@ ul{
 }
 .card:hover > .cardImage , .card:hover > .cardTitle, .card:hover > .cardInfo{
     transition: all .3s ease;
-    opacity: 0.1;
+    opacity: 0.2;
 }
 .card:hover > a > .cardContent{
-    opacity: 0.9;
+    opacity: 0.8;
 }
 .cardImage{
     object-fit: cover;
