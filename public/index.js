@@ -44,7 +44,7 @@ function displayArticle(sub, article){
     cardTitle.classList.add("cardTitle");
     var cardTitleText = document.createElement("p");
     cardTitleText.textContent = article.title;
-    cardTitile.appendChild(cardTitleText);
+    cardTitle.appendChild(cardTitleText);
 
     var cardInfo = document.createElement("div");
     cardInfo.classList.add("cardInfo");
