@@ -137,7 +137,7 @@ function extract(res){
                 (style.bold?`</strong>`:``) +
                 (emptyStr ? `` : `</p>`) +
                 (style.link?`</a>`:``);
-                imgCaptionState=emptyStr;
+                imgCaptionState=emptyStr && imgCaptionState;
             }
             if(elements[j].inlineObjectElement){
                 if(data.img!=="X"){
