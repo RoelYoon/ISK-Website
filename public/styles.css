@@ -19,7 +19,7 @@ img:not(#headImg){
 .imgCaption{
     display: block;
     text-align:center;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 p, em, strong, a{
     margin:0;
