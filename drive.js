@@ -111,6 +111,7 @@ function extract(res){
     var level = 0;
     var dataSet = false;
     let contents = res.data.body.content;
+    var imgCaptionState = false;
     for(var i = 0; i < contents.length; ++i){
         if(!contents[i].paragraph){continue;}
         let elements = contents[i].paragraph.elements;
@@ -127,12 +128,15 @@ function extract(res){
                 if(!dataSet){continue;}
                 let style = elements[j].textRun.textStyle;
                 data.html+=(style.link?`<a href=${style.link.url}>`:``) + 
+                (elements[j].textRun.content=="\n" ? `` : imgCaptionState ? `<p class="imgCaption">` : `<p>`) +
                 (style.bold?`<strong>`:``) +
                 (style.italic?`<em>`:``) +
-                (elements[j].textRun.content=="\n" ? "<br>" : elements[j].textRun.content.replace("\n","</p><p>")) +
+                elements[j].textRun.content.replace("\n",`<br>`) +
                 (style.italic?`</em>`:``) +
                 (style.bold?`</strong>`:``) +
+                (elements[j].textRun.content=="\n" ? `` : `</p>`) +
                 (style.link?`</a>`:``);
+                imgCaptionState=false;
             }
             if(elements[j].inlineObjectElement){
                 if(data.img!=="X"){
@@ -140,6 +144,7 @@ function extract(res){
                 }else{
                     data.img=`${res.data.inlineObjects[elements[j].inlineObjectElement.inlineObjectId].inlineObjectProperties.embeddedObject.imageProperties.sourceUri}`;
                 }
+                imgCaptionState=true;
             }
         }
     }
