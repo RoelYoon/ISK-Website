@@ -71,12 +71,12 @@ function displayArticle(sub, article){
 
     var a = document.createElement('a');            
     a.href = `${address}articleHTML?id=${article.id}`;
+    a.appendChild(cardContent);
 
     card.appendChild(cardTitle);
     card.appendChild(cardInfo);
-    card.appendChild(cardContent);
-    a.appendChild(card);
-    sub.appendChild(a);
+    card.appendChild(a);
+    sub.appendChild(card);
 }
 /*
 <div class="cards" id="latest">
