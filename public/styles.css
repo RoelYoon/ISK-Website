@@ -99,7 +99,7 @@ ul{
     background-color: rgba(189, 207, 201, 0.4);
     position: relative;
     padding-bottom: 75px;
-    opacity: 0;
+    opacity: 1;
 }
 .cardContent{
     position: absolute;
