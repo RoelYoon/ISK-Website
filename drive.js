@@ -129,13 +129,13 @@ function extract(res){
                 let emptyStr = elements[j].textRun.content=="\n"; 
                 let style = elements[j].textRun.textStyle;
                 data.html+=(style.link?`<a href=${style.link.url}>`:``) + 
-                (emptyStr || style.bold || style.italic ? `` : imgCaptionState ? `<p class="imgCaption">` : `<p>`) +
+                (emptyStr? `` : imgCaptionState ? `<p class="imgCaption">` : `<p>`) +
                 (style.bold?`<strong>`:``) +
                 (style.italic?`<em>`:``) +
                 elements[j].textRun.content.replace("\n",`<br>`) +
                 (style.italic?`</em>`:``) +
                 (style.bold?`</strong>`:``) +
-                (emptyStr || style.bold || style.italic ? `` : `</p>`) +
+                (emptyStr? `` : `</p>`) +
                 (style.link?`</a>`:``);
                 imgCaptionState=emptyStr && imgCaptionState;
             }
