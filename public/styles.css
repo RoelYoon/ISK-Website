@@ -107,7 +107,7 @@ ul{
     text-overflow: ellipsis;
     background-color: #e9e07f;
 }
-.card:hover .cardImage,.cardTitle,.cardInfo{
+.card:hover{
     opacity: 0.2;
 }
 
