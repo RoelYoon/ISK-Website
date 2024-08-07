@@ -112,15 +112,11 @@ ul{
     text-overflow: ellipsis;
     overflow:hidden;
 }
-.cardContent > p{
-    word-break:break-all;
-    text-overflow: ellipsis;
-}
 .card:hover > .cardImage , .card:hover > .cardTitle, .card:hover > .cardInfo{
     transition: all .3s ease;
     opacity: 0;
 }
-.card:hover > .cardContent{
+.card:hover > a > .cardContent{
     opacity: 0.8;
 }
 .cardImage{

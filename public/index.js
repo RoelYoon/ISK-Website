@@ -71,10 +71,10 @@ function displayArticle(sub, article){
 
     var a = document.createElement('a');            
     a.href = `${address}articleHTML?id=${article.id}`;
-    a.appendChild(cardContent);
 
     card.appendChild(cardTitle);
     card.appendChild(cardInfo);
+    a.appendChild(cardContent);
     card.appendChild(a);
     sub.appendChild(card);
 }
