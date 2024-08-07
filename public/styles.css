@@ -110,6 +110,7 @@ ul{
     transition: all .3s ease;
 }
 .card:hover > .cardImage , .card:hover > .cardTitle, .card:hover > .cardInfo{
+    transition: all .3s ease;
     opacity: 0;
 }
 .card:hover > .cardContent{
