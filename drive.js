@@ -126,17 +126,18 @@ function extract(res){
                     }
                 }
                 if(!dataSet){continue;}
+                let emptyStr = elements[j].textRun.content=="\n"; 
                 let style = elements[j].textRun.textStyle;
                 data.html+=(style.link?`<a href=${style.link.url}>`:``) + 
-                (elements[j].textRun.content=="\n" ? `` : imgCaptionState ? `<p class="imgCaption">` : `<p>`) +
+                (emptyStr ? `` : imgCaptionState ? `<p class="imgCaption">` : `<p>`) +
                 (style.bold?`<strong>`:``) +
                 (style.italic?`<em>`:``) +
                 elements[j].textRun.content.replace("\n",`<br>`) +
                 (style.italic?`</em>`:``) +
                 (style.bold?`</strong>`:``) +
-                (elements[j].textRun.content=="\n" ? `` : `</p>`) +
+                (emptyStr ? `` : `</p>`) +
                 (style.link?`</a>`:``);
-                imgCaptionState=false;
+                imgCaptionState=emptyStr;
             }
             if(elements[j].inlineObjectElement){
                 if(data.img!=="X"){
