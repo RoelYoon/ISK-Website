@@ -132,7 +132,7 @@ function extract(res){
                 (emptyStr ? `` : imgCaptionState ? `<p class="imgCaption">` : `<p>`) +
                 (style.bold?`<strong>`:``) +
                 (style.italic?`<em>`:``) +
-                elements[j].textRun.content.replace("\n",``) +
+                elements[j].textRun.content.replace("\n",`<br>`) +
                 (style.italic?`</em>`:``) +
                 (style.bold?`</strong>`:``) +
                 (emptyStr ? `` : `</p>`) +
