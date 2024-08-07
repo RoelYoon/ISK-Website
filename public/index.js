@@ -39,14 +39,12 @@ function displayArticle(sub, article){
     cardImage.classList.add("cardImage");
     cardImage.src = article.img;
     card.appendChild(cardImage);
+
     var cardTitle = document.createElement("div");
     cardTitle.classList.add("cardTitle");
-
-    var a = document.createElement('a');            
-    var link = document.createTextNode(article.title);
-    a.appendChild(link); 
-    a.title = article.title; 
-    a.href = `${address}articleHTML?id=${article.id}`;
+    var cardTitleText = document.createElement("p");
+    cardTitleText.textContent = article.title;
+    cardTitile.appendChild(cardTitleText);
 
     var cardInfo = document.createElement("div");
     cardInfo.classList.add("cardInfo");
@@ -71,11 +69,14 @@ function displayArticle(sub, article){
     cardContent.classList.add("cardContent");
     cardContent.innerHTML = article.content;
 
-    cardTitle.appendChild(a);
+    var a = document.createElement('a');            
+    a.href = `${address}articleHTML?id=${article.id}`;
+
     card.appendChild(cardTitle);
     card.appendChild(cardInfo);
     card.appendChild(cardContent);
-    sub.appendChild(card);
+    a.appendChild(card);
+    sub.appendChild(a);
 }
 /*
 <div class="cards" id="latest">
