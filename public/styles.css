@@ -106,9 +106,11 @@ ul{
     top: 0;
     bottom: 0;
     opacity: 0;
-    text-overflow: ellipsis;
     background-color: #9ea8b4;
     transition: all .3s ease;
+}
+.cardContent > p{
+    text-overflow: ellipsis;
 }
 .card:hover > .cardImage , .card:hover > .cardTitle, .card:hover > .cardInfo{
     transition: all .3s ease;
