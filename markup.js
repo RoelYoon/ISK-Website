@@ -137,7 +137,7 @@ function categoryPage(articles){
             <a href=${process.env.ADDRESS}articleHTML?id=${articles[i].id}> 
                 <div class="cardContent">
                     <div class="cardContentContainer">
-                        ${articles[i].content}
+                        ${articles[i].content.replace(/<\/?a[^>]*>/g, "")}
                     </div>
                 </div>
             </a>
