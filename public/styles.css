@@ -102,6 +102,7 @@ ul{
 }
 .cardContent{
     position: absolute;
+    top: 0;
     opacity: 0;
     text-overflow: ellipsis;
 }
