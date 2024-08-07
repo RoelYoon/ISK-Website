@@ -20,7 +20,7 @@ img:not(#headImg){
     text-align:center;
     font-size: 0.8em;
 }
-p{
+p, em, strong, a{
     margin:0;
 }
 body{
