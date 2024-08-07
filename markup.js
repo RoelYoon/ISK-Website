@@ -139,9 +139,7 @@ function categoryPage(articles){
                     <div class="cardContentContainer">
                         ${articles[i].content}
                     </div>
-                </div>
-                why
-            </a>
+                </div></a>
         </div>`;
     }
     var html = `
