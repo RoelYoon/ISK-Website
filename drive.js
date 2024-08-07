@@ -144,6 +144,7 @@ function extract(res){
         }
     }
     data.html+="</div>";
+    data.html.replace("<p></p>","");
     return data;
 }
 
