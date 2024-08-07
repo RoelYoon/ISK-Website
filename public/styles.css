@@ -12,6 +12,7 @@ img{
     max-width:70%;
 }
 img:not(#headImg){
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }
