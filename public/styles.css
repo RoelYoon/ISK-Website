@@ -111,8 +111,7 @@ ul{
 .card:hover:nth-child(0), .card:hover:nth-child(1), .card:hover:nth-child(2){
     opacity: 0;
 }
-
-.card:hover .cardContent{
+.card:hover:nth-child(3){
     opacity: 0.8;
 }
 .cardImage{
