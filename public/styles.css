@@ -110,6 +110,7 @@ ul{
     transition: all .3s ease;
 }
 .cardContent > p{
+    word-break:break-all;
     text-overflow: ellipsis;
 }
 .card:hover > .cardImage , .card:hover > .cardTitle, .card:hover > .cardInfo{
