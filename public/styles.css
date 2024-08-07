@@ -17,6 +17,7 @@ img:not(#headImg){
     margin-right: auto;
 }
 .imgCaption{
+    display: block;
     text-align:center;
     font-size: 0.8em;
 }
