@@ -16,6 +16,9 @@ img:not(#headImg){
     margin-left: auto;
     margin-right: auto;
 }
+img + p{
+    text-align:center;
+}
 body{
     background-color: #7AA8BD;
 }
