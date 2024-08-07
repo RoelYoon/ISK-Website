@@ -140,6 +140,7 @@ function categoryPage(articles){
                         ${articles[i].content}
                     </div>
                 </div>
+                why
             </a>
         </div>`;
     }
