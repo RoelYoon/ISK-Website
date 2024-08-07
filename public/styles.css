@@ -113,9 +113,7 @@ ul{
     padding-bottom: 50px;
     overflow:hidden;
     text-overflow: ellipsis;
-}
-.cardContent > p {
-    max-height: 70%;
+    word-wrap: break-word;
 }
 .card:hover > .cardImage , .card:hover > .cardTitle, .card:hover > .cardInfo{
     transition: all .3s ease;
