@@ -1,4 +1,4 @@
-img{
+#content img{
     max-height: 50%;
     max-width: 70%;
     margin-left: 10%;
@@ -11,7 +11,7 @@ img{
     margin-left: 10%;
     max-width:70%;
 }
-img:not(#headImg){
+#content img:not(#headImg){
     display: block;
     margin-left: auto;
     margin-right: auto;
