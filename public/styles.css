@@ -100,7 +100,6 @@ ul{
     position: relative;
     padding-bottom: 75px;
     opacity: 1;
-    transition: all .3s ease;
 }
 .cardContent{
     position: absolute;
@@ -108,6 +107,7 @@ ul{
     opacity: 0;
     text-overflow: ellipsis;
     background-color: #9ea8b4;
+    transition: all .3s ease;
 }
 .card:hover > .cardImage , .card:hover > .cardTitle, .card:hover > .cardInfo{
     opacity: 0;
