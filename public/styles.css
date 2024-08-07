@@ -11,7 +11,10 @@ img{
     margin-left: 10%;
     max-width:70%;
 }
-
+img:not(#headImg){
+    margin-left: auto;
+    margin-right: auto;
+}
 body{
     background-color: #7AA8BD;
 }
