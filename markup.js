@@ -134,7 +134,8 @@ function categoryPage(articles){
                     <p>${articles[i].views}</p>
                 </div>
             </div>
-            <a href=${process.env.ADDRESS}articleHTML?id=${articles[i].id}> <div class="cardContent">
+            <a href=${process.env.ADDRESS}articleHTML?id=${articles[i].id}> 
+                <div class="cardContent">
                     <div class="cardContentContainer">
                         ${articles[i].content}
                     </div>
