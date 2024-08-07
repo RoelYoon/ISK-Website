@@ -108,7 +108,7 @@ ul{
     text-overflow: ellipsis;
     background-color: #9ea8b4;
 }
-.card:hover:nth-child(0), .card:hover:nth-child(1), .card:hover:nth-child(2){
+.card:hover:nth-child(0), .card:hover:nth-child(1){
     opacity: 0;
 }
 .card:hover:nth-child(3){
