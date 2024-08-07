@@ -22,7 +22,6 @@ img:not(#headImg){
     font-size: 0.8em;
 }
 p, em, strong, a{
-    font-size: 1em;
     margin:0;
     display: inline;
 }
