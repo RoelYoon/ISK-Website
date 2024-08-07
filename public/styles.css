@@ -112,9 +112,6 @@ ul{
     font-family: roboto_serif;
 }
 .cardContentContainer{
-    position: absolute;
-    top: 0;
-    bottom: 0;
     width: 100%;
     height: 70%;
     overflow:hidden;
