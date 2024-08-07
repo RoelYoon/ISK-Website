@@ -100,8 +100,16 @@ ul{
     position: relative;
     padding-bottom: 75px;
 }
+.cardContent{
+    position: absolute;
+    opacity: 0;
+    text-overflow: ellipsis;
+}
 .card:hover{
     opacity: 0.2;
+}
+.card:hover .cardContent{
+    opacity: 1;
 }
 .cardImage{
     object-fit: cover;

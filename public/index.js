@@ -67,9 +67,14 @@ function displayArticle(sub, article){
     cardViews.appendChild(cardViewsText);
     cardInfo.appendChild(cardViews);
 
+    var cardContent = document.createElement("div");
+    cardContent.classList.add("cardContent");
+    cardContent.innerHTML = article.content;
+
     cardTitle.appendChild(a);
     card.appendChild(cardTitle);
     card.appendChild(cardInfo);
+    card.appendChild(cardContent);
     sub.appendChild(card);
 }
 /*
