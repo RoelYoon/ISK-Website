@@ -107,15 +107,13 @@ ul{
     text-overflow: ellipsis;
     background-color: #e9e07f;
 }
-.cardContent html{
-    transition: background .2s ease;
-}
 .card:hover .cardImage,.cardTitle,.cardInfo{
     opacity: 0.2;
 }
 
 .card:hover .cardContent{
     opacity: 1;
+    transition: background .2s ease;
 }
 .cardImage{
     object-fit: cover;
