@@ -16,6 +16,9 @@ img:not(#headImg){
     margin-left: auto;
     margin-right: auto;
 }
+p{
+    margin:0;
+}
 img+p{
     text-align:center;
 }
