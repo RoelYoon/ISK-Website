@@ -109,6 +109,7 @@ ul{
     background-color: #9ea8b4;
     transition: all .3s ease;
     color: black;
+    font-family: roboto_serif;
     word-break:break-all;
     text-overflow: ellipsis;
     overflow:hidden;
