@@ -21,7 +21,7 @@ img:not(#headImg){
     text-align:center;
     font-size: 0.9em;
 }
-p, em, strong, a{
+p{
     margin:0;
     display: inline;
     line-height: 1.5;
